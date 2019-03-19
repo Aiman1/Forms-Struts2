@@ -11,8 +11,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Hashtable;
 
-@WebServlet(name = "cs", urlPatterns = {"/CreerUnUtilisateur","*.php"})
-public class CreerUnUtilisateur extends HttpServlet {
+@WebServlet(name = "cs", urlPatterns = {"/CreerUtilisateur","*.php"})
+public class CreerUtilisateur extends HttpServlet {
     private static Hashtable<Integer, User> usersTable = new Hashtable<>();
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -25,12 +25,12 @@ public class CreerUnUtilisateur extends HttpServlet {
         usersTable.put(
                 usersTable.size()
                 , new User(
-                     request.getParameter("User familly name")
-                    ,request.getParameter("User first name")
-                    ,request.getParameter("User email")
-                    ,usersTable.size()
-                    ,request.getParameter("gender")
-                    ,request.getParameter("User password")
+                        request.getParameter("User familly name")
+                        ,request.getParameter("User first name")
+                        ,request.getParameter("User email")
+                        ,usersTable.size()
+                        ,request.getParameter("gender")
+                        ,request.getParameter("User password")
                 )
         );
 

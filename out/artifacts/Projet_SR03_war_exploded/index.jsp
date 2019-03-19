@@ -14,7 +14,7 @@
 </head>
 <body>
 <div>TODO write content</div>
-<form action="/CreerUnUtilisateur" method="post">
+<form action="/Projet_SR03_war_exploded/CreerUtilisateur" method="post">
   <label> First name </label>
   <input type="text" id="frname" name="User first name"/>
   <br>
