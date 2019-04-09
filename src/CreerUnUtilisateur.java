@@ -1,6 +1,8 @@
 import users.User;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -8,6 +10,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Hashtable;
 
+@WebServlet(name="cs", urlPatterns = {"/","*.php"})
 public class CreerUnUtilisateur extends HttpServlet {
     private static Hashtable<Integer, User> usersTable= new Hashtable<>();
     /**
@@ -49,7 +52,11 @@ public class CreerUnUtilisateur extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs* @throws IOException if an I/O error occurs
      */
     @Override protected void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
-        processRequest(request, response);
+       // PrintWriter p = response.getWriter();
+        // p.println("<h1>"+ System.getProperty("user.dir") +"<h1>");
+        RequestDispatcher requestDispatcher;
+        requestDispatcher = request.getRequestDispatcher("formulaire.jsp");
+        requestDispatcher.forward(request,response);
     }
 
     /**
