@@ -44,7 +44,7 @@ public class CreerUnUtilisateur extends HttpServlet {
             out.println("</body>");out.println("</html>");
         }
     }
-    // <editor-folddefaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+
     /**
      * Handles the HTTP <code>GET</code> method.
      * @param request servlet request
@@ -52,12 +52,24 @@ public class CreerUnUtilisateur extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs* @throws IOException if an I/O error occurs
      */
     @Override protected void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
-       // PrintWriter p = response.getWriter();
-        // p.println("<h1>"+ System.getProperty("user.dir") +"<h1>");
-        RequestDispatcher requestDispatcher;
-        requestDispatcher = request.getRequestDispatcher("formulaire.jsp");
-        requestDispatcher.forward(request,response);
+
+        if (request.getRequestURI().compareTo("/Projet_SR03_war_exploded/new-user") == 0) {
+            RequestDispatcher requestDispatcher;
+            requestDispatcher = request.getRequestDispatcher("formulaire.jsp");
+            requestDispatcher.forward(request, response);
+        }
+
+        else if (request.getRequestURI().compareTo("/Projet_SR03_war_exploded/new-admin") == 0) {
+            RequestDispatcher requestDispatcher;
+            requestDispatcher = request.getRequestDispatcher("formulaire.jsp");
+            requestDispatcher.forward(request, response);
+        }
+        else {
+            PrintWriter p = response.getWriter();
+            p.println("<h1>" + request.getRequestURI() + "<h1>");
+        }
     }
+
 
     /**
      *
