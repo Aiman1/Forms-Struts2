@@ -20,7 +20,7 @@ public class CreerUnUtilisateur extends HttpServlet {
      * @throws ServletException if a servlet-specific error occur
      * * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+    protected void processRequestUser(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
         usersTable.put(
                 usersTable.size()
                 , new User(
@@ -44,7 +44,20 @@ public class CreerUnUtilisateur extends HttpServlet {
             out.println("</body>");out.println("</html>");
         }
     }
+    protected void processRequestAdmin(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
 
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Controller:</title>");
+            out.println("</head>");out.println("<body>");
+            out.println("<h1> Admin pris en compte </h1>");
+            out.println("</body>");out.println("</html>");
+        }
+    }
     /**
      * Handles the HTTP <code>GET</code> method.
      * @param request servlet request
@@ -55,13 +68,13 @@ public class CreerUnUtilisateur extends HttpServlet {
 
         if (request.getRequestURI().compareTo("/Projet_SR03_war_exploded/new-user") == 0) {
             RequestDispatcher requestDispatcher;
-            requestDispatcher = request.getRequestDispatcher("formulaire.jsp");
+            requestDispatcher = request.getRequestDispatcher("formulaire-user.jsp");
             requestDispatcher.forward(request, response);
         }
 
         else if (request.getRequestURI().compareTo("/Projet_SR03_war_exploded/new-admin") == 0) {
             RequestDispatcher requestDispatcher;
-            requestDispatcher = request.getRequestDispatcher("formulaire.jsp");
+            requestDispatcher = request.getRequestDispatcher("formulaire-admin.jsp");
             requestDispatcher.forward(request, response);
         }
         else {
@@ -80,7 +93,16 @@ public class CreerUnUtilisateur extends HttpServlet {
      *  @throws IOException if an I/O error occurs
      *  */
     @Override protected void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
-        processRequest(request, response);
+        if (request.getHeader("referer").compareTo("http://localhost:8083/Projet_SR03_war_exploded/new-user") == 0) {
+            processRequestUser(request, response);
+        }
+        if (request.getHeader("referer").compareTo("http://localhost:8083/Projet_SR03_war_exploded/new-admin") == 0) {
+            processRequestAdmin(request, response);
+        }
+        else{
+            PrintWriter p = response.getWriter();
+            p.println("<h1>" + request.getHeader("referer")+ "<h1>");
+        }
     }
 }
 /**
