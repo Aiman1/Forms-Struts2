@@ -1,4 +1,5 @@
-import users.User;
+import Utilisateurs.Utilisateur;
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,7 +13,7 @@ import java.util.Hashtable;
 
 @WebServlet(name="cs", urlPatterns = {"/","*.php"})
 public class CreerUnUtilisateur extends HttpServlet {
-    private static Hashtable<Integer, User> usersTable= new Hashtable<>();
+    private static Hashtable<Integer, Utilisateur> usersTable= new Hashtable<>();
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.** @param request servlet request
@@ -23,7 +24,7 @@ public class CreerUnUtilisateur extends HttpServlet {
     protected void processRequestUser(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
         usersTable.put(
                 usersTable.size()
-                , new User(
+                , new Utilisateur(
                      request.getParameter("User familly name")
                     ,request.getParameter("User first name")
                     ,request.getParameter("User email"),usersTable.size()

@@ -1,6 +1,6 @@
-package users;
+package Utilisateurs;
 
-public class User {
+public class Utilisateur {
     String user_familly_name;
     String user_first_name;
     String user_email;
@@ -8,7 +8,7 @@ public class User {
     String gender;
     String user_password;
 
-    public User(String user_familly_name, String user_first_name, String user_email, int size, String gender, String user_password) {
+    public Utilisateur(String user_familly_name, String user_first_name, String user_email, int size, String gender, String user_password) {
         this.user_familly_name = user_familly_name;
         this.user_first_name = user_first_name;
         this.user_email = user_email;
