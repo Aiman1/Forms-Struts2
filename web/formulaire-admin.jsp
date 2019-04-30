@@ -20,8 +20,8 @@
     <label> First name </label>
     <input type="text" id="frname" name="User first name" />
     <br>
-    <label> Familly name </label>
-    <input type="text" id="faname" name="User familly name" />
+    <label> Family name </label>
+    <input type="text" id="faname" name="User family name" />
     <br>
     <label> Email </label>
     <input type="email" id="email" name="User email" />

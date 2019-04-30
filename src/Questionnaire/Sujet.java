@@ -2,7 +2,7 @@ package Questionnaire;
 
 import java.util.List;
 
-public class sujet {
+public class Sujet {
     private String sujet;
-    private List<questionnaire> questionnaires;
+    private List<Questionnaire> questionnaires;
 }

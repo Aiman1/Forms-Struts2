@@ -1,8 +1,8 @@
 package Questionnaire;
 
-public abstract class réponse {
+public abstract class Reponse {
     private Boolean statut;
-    private String réponse;
+    private String reponse;
     private Boolean bonne;
 
 }

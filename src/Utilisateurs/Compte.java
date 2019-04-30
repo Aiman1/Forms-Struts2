@@ -1,13 +1,14 @@
 package Utilisateurs;
 
-public class compte {
+public class Compte {
     private String email;
     private String mdp;
-    private Utilisateur creerPar;
+    private Utilisateur creePar;
 
-    public compte(String email,String mdp, Utilisateur creerPar){
+    public Compte(String email,String mdp, Utilisateur creePar){
         assert(mdp.length() >= 6);
         this.email = email;
         this.mdp = mdp;
+        this.creePar = creePar;
     }
 }
