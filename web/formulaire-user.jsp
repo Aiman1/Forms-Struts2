@@ -9,14 +9,14 @@
 <html>
 
 <head>
-    <title>Création d'utillisateurs</title>
+    <title>Création de question</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 <div>TODO write content</div>
-<form action="CreerUnUtilisateur" method="post">
+<form action="Controleurs/CreerUnUtilisateur" method="post">
     <label> First name </label>
     <input type="text" id="frname" name="User first name" />
     <br>

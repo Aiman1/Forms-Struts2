@@ -1,3 +1,5 @@
+package Controleurs;
+
 import Utilisateurs.Utilisateur;
 
 
@@ -11,7 +13,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Hashtable;
 
-@WebServlet(name="cs", urlPatterns = {"/","*.php"})
+@WebServlet(name="cs", urlPatterns = {"/creerusers","creerusers.php"})
 public class CreerUnUtilisateur extends HttpServlet {
     private static Hashtable<Integer, Utilisateur> usersTable= new Hashtable<>();
     /**
