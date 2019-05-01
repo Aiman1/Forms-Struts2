@@ -22,6 +22,8 @@ public class CreerUnUtilisateur extends HttpServlet {
      * * @throws IOException if an I/O error occurs
      */
     protected void processRequestUser(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+
+
         usersTable.put(
                 usersTable.size()
                 , new Utilisateur(
