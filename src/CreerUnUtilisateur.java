@@ -1,12 +1,12 @@
-import Utilisateurs.Utilisateur;
-
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import utilisateurs.Utilisateur;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Hashtable;
@@ -25,7 +25,7 @@ public class CreerUnUtilisateur extends HttpServlet {
         usersTable.put(
                 usersTable.size()
                 , new Utilisateur(
-                     request.getParameter("User familly name")
+                     request.getParameter("User family name")
                     ,request.getParameter("User first name")
                     ,request.getParameter("User email"),usersTable.size()
                     ,request.getParameter("gender")

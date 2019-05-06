@@ -1,4 +1,4 @@
-package Utilisateurs;
+package utilisateurs;
 
 public class Utilisateur {
     String user_family_name;
