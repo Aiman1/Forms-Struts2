@@ -1,5 +1,7 @@
 package Controleurs;
 
+import DAOs.UtilisateursDAO;
+import DAOs.administrateurDAO;
 import Utilisateurs.Utilisateur;
 
 
@@ -15,7 +17,6 @@ import java.util.Hashtable;
 
 @WebServlet(name="cs", urlPatterns = {"/creerusers","creerusers.php"})
 public class CreerUnUtilisateur extends HttpServlet {
-    private static Hashtable<Integer, Utilisateur> usersTable= new Hashtable<>();
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.** @param request servlet request
@@ -25,17 +26,14 @@ public class CreerUnUtilisateur extends HttpServlet {
      */
     protected void processRequestUser(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
 
+        UtilisateursDAO QstDao = new  ateurDAO();
 
-        usersTable.put(
-                usersTable.size()
-                , new Utilisateur(
-                     request.getParameter("User familly name")
-                    ,request.getParameter("User first name")
-                    ,request.getParameter("User email"),usersTable.size()
-                    ,request.getParameter("gender")
-                    ,request.getParameter("User password")
-                )
-        );
+        QstDao.setLastName(request.getParameter("User familly name"));
+        QstDao.setFirstName(request.getParameter("User first name"));
+        QstDao.setEmail(request.getParameter("User email"));
+        QstDao.setGender(request.getParameter("gender"));
+        QstDao.setPwd(request.getParameter("User password"));
+
 
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
@@ -45,12 +43,19 @@ public class CreerUnUtilisateur extends HttpServlet {
             out.println("<head>");
             out.println("<title>Controller:</title>");
             out.println("</head>");out.println("<body>");
-            out.println("<h1> Utilisateur crée " + usersTable.get(usersTable.size()-1).toString() + "</h1>");
+            out.println("<h1> Utilisateur crée " + QstDao.getId.toString() + "</h1>");
             out.println("</body>");out.println("</html>");
         }
     }
     protected void processRequestAdmin(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
 
+        UtilisateursDAO QstDao = new administrateurDAO();
+
+        QstDao.setLastName(request.getParameter("User familly name"));
+        QstDao.setFirstName(request.getParameter("User first name"));
+        QstDao.setEmail(request.getParameter("User email"));
+        QstDao.setEmail(request.getParameter("gender"));
+        QstDao.setEmail(request.getParameter("User password"));
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */

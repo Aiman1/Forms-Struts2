@@ -10,7 +10,4 @@ public class Parcours {
     private Utilisateur u;
     private Questionnaire q;
     private double dateDebut;
-
-    private List<Reponse> reponsesDonnees;
-
 }
