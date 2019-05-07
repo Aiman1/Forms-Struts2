@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 import db.ConfigConnection;
@@ -22,6 +23,9 @@ public class SujetDAO implements DAO<Sujet>{
 		Statement sql = db.createStatement();
 		String sqlText = "SELECT * FROM Sujet WHERE id = " + id;
 		ResultSet res = sql.executeQuery(sqlText);
+		while(res.next()) {
+			return Optional.ofNullable(new Sujet())
+		}
 	}
 
 	@Override
@@ -39,7 +43,7 @@ public class SujetDAO implements DAO<Sujet>{
 	@Override
 	public void update(Sujet t, String[] params) {
 		// TODO Auto-generated method stub
-		
+		t.setSujet(Objects.requireNonNull(params[0], "Le sujet ne peut etre nul"));
 	}
 
 	@Override
