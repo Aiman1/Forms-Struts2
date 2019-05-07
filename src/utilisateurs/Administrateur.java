@@ -1,10 +1,10 @@
-package Utilisateurs;
-
-import Questionnaire.Question;
-import Questionnaire.Questionnaire;
-import Questionnaire.Reponse;
+package utilisateurs;
 
 import java.util.ArrayList;
+
+import questionnaire.Question;
+import questionnaire.Questionnaire;
+import questionnaire.Reponse;
 
 public class Administrateur extends Utilisateur {
 

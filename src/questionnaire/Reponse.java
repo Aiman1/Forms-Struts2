@@ -1,4 +1,4 @@
-package Questionnaire;
+package questionnaire;
 
 public abstract class Reponse {
     private int id;

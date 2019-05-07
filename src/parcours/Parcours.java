@@ -1,8 +1,8 @@
-package Parcours;
+package parcours;
 
-import Questionnaire.Questionnaire;
-import Questionnaire.Reponse;
-import Utilisateurs.Utilisateur;
+import questionnaire.Questionnaire;
+import questionnaire.Reponse;
+import utilisateurs.Utilisateur;
 
 import java.util.List;
 

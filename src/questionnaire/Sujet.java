@@ -1,4 +1,4 @@
-package Questionnaire;
+package questionnaire;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package Utilisateurs;
+package utilisateurs;
 
 public class Stagiaire extends Utilisateur {
 
