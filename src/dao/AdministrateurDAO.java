@@ -3,6 +3,7 @@ package dao;
 import java.util.List;
 import java.util.Optional;
 
+import DB.Database;
 import utilisateurs.Administrateur;
 
 public class AdministrateurDAO implements DAO<Administrateur>{
@@ -22,7 +23,7 @@ public class AdministrateurDAO implements DAO<Administrateur>{
 	@Override
 	public void create(Administrateur t) {
 		// TODO Auto-generated method stub
-		
+		Database.getConnection();
 	}
 
 	@Override

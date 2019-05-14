@@ -3,6 +3,7 @@ package dao;
 import java.util.List;
 import java.util.Optional;
 
+import DB.Database;
 import parcours.Parcours;
 
 public class ParcoursDAO implements DAO<Parcours>{
@@ -22,7 +23,7 @@ public class ParcoursDAO implements DAO<Parcours>{
 	@Override
 	public void create(Parcours t) {
 		// TODO Auto-generated method stub
-		
+		Database.getConnection();
 	}
 
 	@Override

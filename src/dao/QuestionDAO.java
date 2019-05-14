@@ -3,6 +3,7 @@ package dao;
 import java.util.List;
 import java.util.Optional;
 
+import DB.Database;
 import questionnaire.Question;
 
 public class QuestionDAO implements DAO<Question>{
@@ -22,7 +23,7 @@ public class QuestionDAO implements DAO<Question>{
 	@Override
 	public void create(Question t) {
 		// TODO Auto-generated method stub
-		
+		Database.getConnection();
 	}
 
 	@Override

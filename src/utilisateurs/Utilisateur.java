@@ -16,6 +16,9 @@ public class Utilisateur {
         this.gender = gender;
         this.user_password = user_password;
     }
+    public Utilisateur(){
+
+    }
 
     @Override
     public String toString(){

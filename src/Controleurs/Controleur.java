@@ -1,7 +1,13 @@
 package Controleurs;
 
-import Questionnaire.Question;
-import Utilisateurs.Utilisateur;
+
+import dao.*;
+import parcours.Parcours;
+import questionnaire.Question;
+import questionnaire.Questionnaire;
+import questionnaire.Reponse;
+import utilisateurs.Administrateur;
+import utilisateurs.Stagiaire;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,9 +17,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 
 @WebServlet(name="cs_questions", urlPatterns = {"/question","question.php"})
-public class CreerQuestion extends HttpServlet {
+public class Controleur extends HttpServlet {
     int questionId;
     @Override protected void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
 
@@ -37,20 +44,36 @@ public class CreerQuestion extends HttpServlet {
      */
     protected void processRequestUser(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
 
-        QuestionDAO QstDao = new QuestionDAO;
-        ReponseDAO RepDao = new ReponseDAO;
+        DAO QstDao = new QuestionDAO();
+        DAO RepDao = new ReponseDAO();
+        Question q = new Question();
+        Reponse r = new Reponse();
 
-        int createQuestion = QstDao.create(
-                questionId;
-                request.getParameter("Intitulé de la question")
-                );
+        DAO Admn = new AdministrateurDAO();
+        DAO Parc = new ParcoursDAO();
+        Administrateur a = new Administrateur();
+        Parcours p = new Parcours();
+
+        DAO Stg = new StagiaireDAO();
+        DAO Qstnr = new QuestionnaireDAO();
+        try {
+            DAO sujet = new SujetDAO();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        Stagiaire stg = new Stagiaire();
+        Questionnaire qst = new Questionnaire();
+
+        /*
+        int createQuestion = QstDao.create( questionId, request.getParameter("Intitulé de la question"));
         int createQustion = RepDao.create(
-                questionId++;
+                questionId++,
                 request.getParameter("Réponse1"),
                 request.getParameter("Réponse2"),
                 request.getParameter("Réponse3"),
                 request.getParameter("Réponse4")
         );
+        */
 
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
@@ -60,7 +83,7 @@ public class CreerQuestion extends HttpServlet {
             out.println("<head>");
             out.println("<title>Controller:</title>");
             out.println("</head>");out.println("<body>");
-            out.println("<h1> Utilisateur crée " + usersTable.get(usersTable.size()-1).toString() + "</h1>");
+            out.println("<h1> Question crée " + questionId++ + "</h1>");
             out.println("</body>");out.println("</html>");
         }
     }

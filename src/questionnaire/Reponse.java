@@ -1,6 +1,6 @@
 package questionnaire;
 
-public abstract class Reponse {
+public class Reponse {
     private int id;
     private Boolean statut;
     private String reponse;

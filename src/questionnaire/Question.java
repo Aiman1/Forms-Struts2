@@ -9,6 +9,7 @@ public class Question {
         this.reponses = reponses;
         this.statut = statut;
     }
+    public Question(){}
 
     private int id;
     private String intitule;
