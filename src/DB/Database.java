@@ -1,4 +1,4 @@
-package DB;
+package db;
 
 //import com.sun.java.util.jar.pack.Package;
 

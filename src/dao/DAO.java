@@ -12,12 +12,12 @@ public interface DAO<T>{
 	List<T> getAll();
 	
 	//Create an object
-	void create(T t);
+	int create(T t);
 	
 	//Update an object
-	void update(T t, String[] params);
+	int update(T t, String[] params);
 	
 	//Delete an object
-	void delete(T t);
+	int delete(T t);
 	
 }

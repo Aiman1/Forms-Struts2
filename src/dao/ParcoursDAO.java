@@ -1,12 +1,19 @@
 package dao;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
-import DB.Database;
+import db.Database;
 import parcours.Parcours;
 
 public class ParcoursDAO implements DAO<Parcours>{
+	private static Connection db;
+	
+	public ParcoursDAO() throws SQLException {
+		db = Database.getConnection();
+	}
 
 	@Override
 	public Optional<Parcours> get(long id) {
@@ -21,19 +28,18 @@ public class ParcoursDAO implements DAO<Parcours>{
 	}
 
 	@Override
-	public void create(Parcours t) {
+	public int create(Parcours t) {
 		// TODO Auto-generated method stub
-		Database.getConnection();
 	}
 
 	@Override
-	public void update(Parcours t, String[] params) {
+	public int update(Parcours t, String[] params) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void delete(Parcours t) {
+	public int delete(Parcours t) {
 		// TODO Auto-generated method stub
 		
 	}
