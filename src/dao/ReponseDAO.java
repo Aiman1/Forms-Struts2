@@ -1,12 +1,19 @@
 package dao;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
-import DB.Database;
+import db.Database;
 import questionnaire.Reponse;
 
 public class ReponseDAO implements DAO<Reponse>{
+	private static Connection db;
+	
+	public ReponseDAO() throws SQLException {
+		db = Database.getConnection();
+	}
 
 	@Override
 	public Optional<Reponse> get(long id) {
@@ -21,19 +28,18 @@ public class ReponseDAO implements DAO<Reponse>{
 	}
 
 	@Override
-	public void create(Reponse t) {
+	public int create(Reponse t) {
 		// TODO Auto-generated method stub
-		Database.getConnection();
 	}
 
 	@Override
-	public void update(Reponse t, String[] params) {
+	public int update(Reponse t, String[] params) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void delete(Reponse t) {
+	public int delete(Reponse t) {
 		// TODO Auto-generated method stub
 		
 	}

@@ -1,4 +1,4 @@
-package Controleurs;
+package controleurs;
 
 
 import dao.*;
@@ -41,8 +41,9 @@ public class Controleur extends HttpServlet {
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occur
      * * @throws IOException if an I/O error occurs
+     * @throws SQLException 
      */
-    protected void processRequestUser(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+    protected void processRequestUser(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException, SQLException {
 
         DAO QstDao = new QuestionDAO();
         DAO RepDao = new ReponseDAO();
@@ -98,7 +99,12 @@ public class Controleur extends HttpServlet {
      *  */
     @Override protected void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
         if (request.getHeader("referer").compareTo("http://localhost:8083/Projet_SR03_war_exploded/question") == 0) {
-            processRequestUser(request, response);
+            try {
+				processRequestUser(request, response);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
         }
         else{
             PrintWriter p = response.getWriter();
