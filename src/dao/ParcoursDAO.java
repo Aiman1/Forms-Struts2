@@ -30,18 +30,19 @@ public class ParcoursDAO implements DAO<Parcours>{
 	@Override
 	public int create(Parcours t) {
 		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
 	public int update(Parcours t, String[] params) {
 		// TODO Auto-generated method stub
-		
+		return 0;
 	}
 
 	@Override
 	public int delete(Parcours t) {
 		// TODO Auto-generated method stub
-		
+		return 0;
 	}
 	
 }

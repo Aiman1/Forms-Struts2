@@ -30,18 +30,19 @@ public class QuestionnaireDAO implements DAO<Questionnaire>{
 	@Override
 	public int create(Questionnaire t) {
 		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
 	public int update(Questionnaire t, String[] params) {
 		// TODO Auto-generated method stub
-		
+		return 0;
 	}
 
 	@Override
 	public int delete(Questionnaire t) {
 		// TODO Auto-generated method stub
-		
+		return 0;
 	}
 
 }

@@ -32,18 +32,18 @@ public class StagiaireDAO implements DAO<Stagiaire>{
 	@Override
 	public int create(Stagiaire t) {
 		// TODO Auto-generated method stub
-		
+		return 0;
 	}
 
 	@Override
 	public int update(Stagiaire t, String[] params) {
 		// TODO Auto-generated method stub
-		
+		return 0;
 	}
 
 	@Override
 	public int delete(Stagiaire t) {
 		// TODO Auto-generated method stub
-		
+		return 0;
 	}
 }

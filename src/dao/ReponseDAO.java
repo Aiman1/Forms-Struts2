@@ -30,18 +30,19 @@ public class ReponseDAO implements DAO<Reponse>{
 	@Override
 	public int create(Reponse t) {
 		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
 	public int update(Reponse t, String[] params) {
 		// TODO Auto-generated method stub
-		
+		return 0;
 	}
 
 	@Override
 	public int delete(Reponse t) {
 		// TODO Auto-generated method stub
-		
+		return 0;
 	}
 
 }

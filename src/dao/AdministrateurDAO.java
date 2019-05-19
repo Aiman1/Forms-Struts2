@@ -31,18 +31,19 @@ public class AdministrateurDAO implements DAO<Administrateur>{
 	@Override
 	public int create(Administrateur t) {
 		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
 	public int update(Administrateur t, String[] params) {
 		// TODO Auto-generated method stub
-		
+		return 0;
 	}
 
 	@Override
 	public int delete(Administrateur t) {
 		// TODO Auto-generated method stub
-		
+		return 0;
 	}
 
 }
