@@ -1,15 +1,17 @@
 package utilisateurs;
 
 public class Stagiaire extends Utilisateur {
-	public Stagiaire(){
-		
-	}
-	public Stagiaire(String user_family_name, String user_first_name, String user_email, int size, String gender, String user_password) {
-		super(user_family_name, user_first_name, user_email, size, gender, user_password);
-	}
 	
     
-    public void authentification(String addrMail, String pwd) {
+    public Stagiaire(int id, String family_name, String first_name, String tel, String societe,
+			String gender, boolean actif, Compte compte) {
+		super(id, family_name, first_name, tel, societe, gender, actif, compte);
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+	public void authentification(String addrMail, String pwd) {
 
     }
 }
