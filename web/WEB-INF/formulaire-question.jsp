@@ -24,8 +24,8 @@
     <br>
     <input type="submit" value="Submit"> </form>
     <%
-        Random random = new Random();
-        System.out.println("Random: " + random.nextBoolean());
+        ///Random random = new Random();
+        ///System.out.println("Random: " + random.nextBoolean());
     %>
 </body>
 

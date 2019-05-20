@@ -42,6 +42,7 @@ public class SujetDAO implements DAO<Sujet>{
 	@Override
 	public int create(Sujet t) {
 		// TODO Auto-generated method stub
+		return 0;
 		
 	}
 
@@ -49,11 +50,13 @@ public class SujetDAO implements DAO<Sujet>{
 	public int update(Sujet t, String[] params) {
 		// TODO Auto-generated method stub
 		//t.setSujet(Objects.requireNonNull(params[0], "Le sujet ne peut etre nul"));
+		return 0;
 	}
 
 	@Override
 	public int delete(Sujet t) {
 		// TODO Auto-generated method stub
+		return 0;
 		
 	}
 
