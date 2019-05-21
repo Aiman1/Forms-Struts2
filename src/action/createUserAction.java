@@ -1,20 +1,24 @@
 package action;
 
+import com.opensymphony.xwork2.ActionSupport;
 import dao.StagiaireDAO;
+import org.apache.struts2.interceptor.SessionAware;
 import utilisateurs.Stagiaire;
 import utilisateurs.Utilisateur;
 
 import java.sql.SQLException;
+import java.util.Map;
 
-public class createUserAction {
+public class createUserAction extends ActionSupport implements SessionAware {
     Stagiaire stagiaire = new Stagiaire();
     private Boolean admin;
     public createUserAction(){
+        System.out.println(stagiaire);
         admin = false;
     }
 
     public String execute(){
-        System.out.println("user" + stagiaire);
+        //System.out.println("user" + stagiaire);
         if (admin){
             //TODO
             return "failure";
@@ -30,5 +34,10 @@ public class createUserAction {
                 return "failure";
             }
         }
+    }
+
+    @Override
+    public void setSession(Map<String, Object> map) {
+
     }
 }

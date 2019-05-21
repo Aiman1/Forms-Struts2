@@ -65,23 +65,24 @@ public class StagiaireDAO implements DAO<Stagiaire>{
 	public int create(Stagiaire t){
 		try{
 			Statement sql = db.createStatement();
-			String sqlText = "SELECT Max(id) FROM Compte";
+			String sqlText = "SELECT Max(id) FROM compte";
 			ResultSet res = sql.executeQuery(sqlText);
-			int idCompte = res.getInt("id");
-			String query = " insert into Stagiaire (id, family_name, first_name, tel, societe, gender, actif)"
-			        + " values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			//int idCompte = res.getInt("id");
+			int idCompte = 1;
+			String query = " insert into stagiaire (id, family_name, first_name, tel, societe, gender, actif)"
+			        + " values (?, ?, ?, ?, ?, ?, ?)";
 
-			            PreparedStatement preparedStmt = db.prepareStatement(query);
-			            preparedStmt.setInt (1, idCompte);
-			            preparedStmt.setString (2, t.getFamily_name());
-			            preparedStmt.setString (3, t.getFirst_name());
-			            preparedStmt.setString (4, t.getTel());
-			            preparedStmt.setString (5, t.getSociete());
-			            preparedStmt.setString (6, t.getGender());
-			            preparedStmt.setBoolean (7, t.isActif());
+			PreparedStatement preparedStmt = db.prepareStatement(query);
+			preparedStmt.setString (1, t.getFamily_name());
+			preparedStmt.setString (2, t.getFirst_name());
+			preparedStmt.setString (3, t.getTel());
+			preparedStmt.setString (4, t.getSociete());
+			preparedStmt.setString (5, t.getGender());
+			preparedStmt.setBoolean (6, true);
+			preparedStmt.setInt (7, idCompte);
 
-			            preparedStmt.execute();
-                		return 1;
+			preparedStmt.execute();
+			return 1;
 		}
 		catch (SQLException e) {
 		// TODO Auto-generated catch block

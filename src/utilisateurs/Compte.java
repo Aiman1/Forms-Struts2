@@ -33,4 +33,8 @@ public class Compte {
 	public void setMdp(String mdp) {
 		this.mdp = mdp;
 	}
+
+	public String toString(){
+    	return "email:" + email + " mdp:" + mdp ;
+	}
 }

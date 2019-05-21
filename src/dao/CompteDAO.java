@@ -37,10 +37,14 @@ public class CompteDAO implements DAO<Compte> {
         return 0;
     }
 
-    public boolean find(Compte compte) {
+    public boolean isStagiaire(Compte compte) {
+        System.out.println("-----------------------------");
+        System.out.println(compte.toString());
+        System.out.println("-----------------------------");
         Connection db = Database.getConnection();
         try {
-            String sqlText = "SELECT * FROM COMPTE WHERE login= ? AND mdp = ?";
+            String sqlText = "SELECT * FROM compte WHERE email = ? AND mdp = ?";
+
             PreparedStatement sql = db.prepareStatement(sqlText);
             sql.setString(1,compte.getEmail());
             sql.setString(1,compte.getMdp());
@@ -50,6 +54,10 @@ public class CompteDAO implements DAO<Compte> {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return false;
+    }
+
+    public boolean isAdmin(Compte compte) {
         return false;
     }
 }
