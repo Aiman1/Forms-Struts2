@@ -4,24 +4,31 @@ import dao.StagiaireDAO;
 import utilisateurs.Stagiaire;
 import utilisateurs.Utilisateur;
 
+import java.sql.SQLException;
+
 public class createUserAction {
-    Utilisateur user = new Stagiaire();
+    Stagiaire stagiaire = new Stagiaire();
     private Boolean admin;
     public createUserAction(){
         admin = false;
     }
 
     public String execute(){
-        System.out.println("user"+user);
+        System.out.println("user" + stagiaire);
         if (admin){
             //TODO
             return "failure";
         }
         else {
-            if (new StagiaireDAO().create(user) == 1)
-                return "success";
-            else
+            try {
+                if (new StagiaireDAO().create(stagiaire) == 1)
+                    return "success";
+                else
+                    return "failure";
+            } catch (SQLException e) {
+                e.printStackTrace();
                 return "failure";
+            }
         }
     }
 }
