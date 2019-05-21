@@ -9,7 +9,7 @@ public interface DAO<T>{
 	Optional<T> get(long id) throws SQLException;
 	
 	//Get all objects
-	List<T> getAll();
+	List<T> getAll() throws SQLException;
 	
 	//Create an object
 	void create(T t) throws SQLException;

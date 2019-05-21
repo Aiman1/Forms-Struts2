@@ -1,7 +1,6 @@
 package dao;
 
 import db.Database;
-import questionnaire.Sujet;
 import utilisateurs.Compte;
 import utilisateurs.Administrateur;
 
@@ -10,11 +9,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import dao.DAO;
-import utilisateurs.Administrateur;
 
 public class AdministrateurDAO implements DAO<Administrateur>{
 	private static Connection db;
@@ -43,9 +42,22 @@ public class AdministrateurDAO implements DAO<Administrateur>{
 	}
 
 	@Override
-	public List<Administrateur> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Administrateur> getAll() throws SQLException {
+		List<Administrateur> l = new ArrayList<Administrateur>();
+        Statement st = db.createStatement();
+        ResultSet res = st.executeQuery("select * from Administrateur" );
+    	Compte compte = null;
+        
+        while(res.next()){ 
+        	ResultSet resCpt = st.executeQuery("select * from compte where id =" + res.getInt("compte"));
+    		if(resCpt.next()) {
+    			compte = new Compte(resCpt.getString("email"), resCpt.getString("mdp"));
+    		}
+            l.add(new Administrateur(res.getInt("id"), res.getString("family_name"), res.getString("first_name"), res.getString("tel"), res.getString("societe"), res.getString("gender"), res.getBoolean("actif"), compte));
+        } 
+
+    
+        return l;
 	}
 
 	@Override

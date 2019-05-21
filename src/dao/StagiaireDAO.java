@@ -10,6 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -42,9 +43,22 @@ public class StagiaireDAO implements DAO<Stagiaire>{
 	}
 
 	@Override
-	public List<Stagiaire> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Stagiaire> getAll() throws SQLException{
+		List<Stagiaire> l = new ArrayList<Stagiaire>();
+            Statement st = db.createStatement();
+            ResultSet res = st.executeQuery("select * from Stagiaire" );
+        	Compte compte = null;
+            
+            while(res.next()){ 
+            	ResultSet resCpt = st.executeQuery("select * from compte where id =" + res.getInt("compte"));
+        		if(resCpt.next()) {
+        			compte = new Compte(resCpt.getString("email"), resCpt.getString("mdp"));
+        		}
+                l.add(new Stagiaire(res.getInt("id"), res.getString("family_name"), res.getString("first_name"), res.getString("tel"), res.getString("societe"), res.getString("gender"), res.getBoolean("actif"), compte));
+            } 
+
+        
+        return l;
 	}
 
 	@Override
