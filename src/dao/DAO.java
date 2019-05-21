@@ -12,12 +12,12 @@ public interface DAO<T>{
 	List<T> getAll() throws SQLException;
 	
 	//Create an object
-	void create(T t) throws SQLException;
+	int create(T t) throws SQLException;
 	
 	//Update an object
-	void update(T t);
+	int update(T t, String[] params);
 	
 	//Delete an object
-	void delete(T t) throws SQLException;
+	int delete(T t) throws SQLException;
 	
 }

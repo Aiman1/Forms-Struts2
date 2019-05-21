@@ -4,9 +4,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 
 import db.Database;
@@ -47,7 +45,8 @@ public class SujetDAO implements DAO<Sujet>{
 	}
 
 	@Override
-	public int update(Sujet t, String[] params) {
+	public int update(Sujet sujet, String[] params) {
+		//, String[] params)
 		// TODO Auto-generated method stub
 		//t.setSujet(Objects.requireNonNull(params[0], "Le sujet ne peut etre nul"));
 		return 0;

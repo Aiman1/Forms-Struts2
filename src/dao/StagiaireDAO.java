@@ -62,7 +62,7 @@ public class StagiaireDAO implements DAO<Stagiaire>{
 	}
 
 	@Override
-	public void create(Stagiaire t) throws SQLException{
+	public int create(Stagiaire t){
 		try{
 			Statement sql = db.createStatement();
 			String sqlText = "SELECT Max(id) FROM Compte";
@@ -82,14 +82,16 @@ public class StagiaireDAO implements DAO<Stagiaire>{
 
 			            preparedStmt.execute();
 		}
-		catch (Exception e) {
+		catch (SQLException e) {
 		// TODO Auto-generated catch block
-		e.printStackTrace();
+			e.printStackTrace();
+			return 0;
 		}
+		return 1;
 	}
 
 	@Override
-	public void update(Stagiaire t) {
+	public int update(Stagiaire t, String[] params) {
 		try{
 			String query = " update Stagiaire set (family_name = ?, first_name = ?, tel = ?, societe = ?, gender = ?, actif = ?)";
 
@@ -107,10 +109,11 @@ public class StagiaireDAO implements DAO<Stagiaire>{
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 		}
+		return 0;
 	}
 
 	@Override
-	public void delete(Stagiaire t) {
+	public int delete(Stagiaire t) {
 		try {
 			Statement sql = db.createStatement();
 			String sqlText = "DELETE FROM Stagiaire WHERE id = " + t.getId();
@@ -119,6 +122,6 @@ public class StagiaireDAO implements DAO<Stagiaire>{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		return 0;
 	}
 }

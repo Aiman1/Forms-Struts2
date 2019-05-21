@@ -61,7 +61,7 @@ public class AdministrateurDAO implements DAO<Administrateur>{
 	}
 
 	@Override
-	public void create(Administrateur t) throws SQLException{
+	public int create(Administrateur t) throws SQLException{
 		try{
 			Statement sql = db.createStatement();
 			String sqlText = "SELECT Max(id) FROM Compte";
@@ -85,10 +85,11 @@ public class AdministrateurDAO implements DAO<Administrateur>{
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 		}
+		return 0;
 	}
 
 	@Override
-	public void update(Administrateur t) {
+	public int update(Administrateur t, String[] params) {
 		try{
 			String query = " update Administrateur set (family_name = ?, first_name = ?, tel = ?, societe = ?, gender = ?, actif = ?)";
 
@@ -106,10 +107,11 @@ public class AdministrateurDAO implements DAO<Administrateur>{
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 		}
+		return 0;
 	}
 
 	@Override
-	public void delete(Administrateur t) {
+	public int delete(Administrateur t) {
 		try {
 			Statement sql = db.createStatement();
 			String sqlText = "DELETE FROM Administrateur WHERE id = " + t.getId();
@@ -118,6 +120,7 @@ public class AdministrateurDAO implements DAO<Administrateur>{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return 0;
 		
 	}
 }

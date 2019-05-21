@@ -6,6 +6,10 @@ public class Compte {
     private Utilisateur creePar;
     private static int nbComptes = 0;
 
+    public Compte(){
+
+	}
+
     public Compte(String email,String mdp){
         assert(mdp.length() >= 6);
         this.email = email;
@@ -29,6 +33,4 @@ public class Compte {
 	public void setMdp(String mdp) {
 		this.mdp = mdp;
 	}
-    
-    
 }

@@ -1,16 +1,25 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: oxygene
-  Date: 19/03/19
-  Time: 17:50
+  Date: 14/05/19
+  Time: 17:09
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+<head>
+  <title>Login</title>
+</head>
+<body>
+<s:form action="SignIn">
+  <label> Email </label>
+  <input type="email" id="email" name="email" />
+  <br>
+  <label> Password </label>
+  <input type="password" id="mdp" name="mdp" />
+  <br>
+  <s:submit value="envoyer"/>
+</s:form>
+</body>
 </html>

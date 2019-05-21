@@ -1,6 +1,6 @@
 package utilisateurs;
 
-public class Utilisateur {
+public abstract class Utilisateur {
 	int id;
     String family_name;
     String first_name;
@@ -11,7 +11,9 @@ public class Utilisateur {
     Compte compte;
 
    
-	
+	public Utilisateur(){
+
+	}
 	public Utilisateur(int id, String family_name, String first_name, String tel, String societe,
 			String gender, boolean actif, Compte compte) {
 		this.id = id;
@@ -28,6 +30,7 @@ public class Utilisateur {
 		return id;
 	}
 
+	public abstract Boolean isAdmin();
 
 
 	public void setId(int id) {

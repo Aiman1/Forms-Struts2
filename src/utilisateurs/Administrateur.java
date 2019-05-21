@@ -31,4 +31,8 @@ public class Administrateur extends Utilisateur {
     public void modifierOrdreQuestion(Questionnaire q){
         ArrayList<Question> questions = q.getQuestions();
     }
+    @Override
+    public Boolean isAdmin(){
+        return true;
+    }
 }
