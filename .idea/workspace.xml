@@ -5,13 +5,78 @@
       <artifact name="Projet-SR03:war exploded" />
     </artifacts-to-build>
   </component>
+  <component name="AutomaticModuleUnloader">
+    <loaded-modules>
+      <module name="Projet-SR03" />
+    </loaded-modules>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ffb7f208-f7f0-42bc-81c7-884640e8fd4f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DAOs/UtilisateursDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DAOs/administrateurDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Projet_SR03_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Projet_SR03_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controleurs/CreerUnUtilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controleurs/CreerUnUtilisateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parcours/Parcours.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parcours/Parcours.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Struts/Struts.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Struts/lib/commons-fileupload.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Struts/lib/commons-io.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Struts/lib/commons-lang.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Struts/lib/freemarker.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Struts/lib/log4j.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Struts/lib/ognl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Struts/lib/struts2-core.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Struts/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Struts/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/lib/commons-fileupload.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/lib/commons-io.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/lib/commons-lang.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/lib/freemarker.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/lib/log4j.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/lib/ognl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/lib/struts2-core.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/dao/AdministrateurDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/dao/DAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/dao/ParcoursDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/dao/QuestionDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/dao/QuestionnaireDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/dao/ReponseDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/dao/SujetDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/parcours/Parcours.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/questionnaire/Question.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/questionnaire/Questionnaire.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/questionnaire/Reponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/questionnaire/Sujet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/utilisateurs/Administrateur.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/utilisateurs/Stagiaire.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/utilisateurs/Utilisateur.class" beforeDir="false" />
+    </list>
+    <list id="1cd517e3-34ef-4ef0-9c60-5b3e5cd826b6" name="Revert &quot;login OK&quot;" comment="Revert &quot;login OK&quot;&#10;&#10;This reverts commit 94abacef">
+      <change beforePath="$PROJECT_DIR$/Projet-SR03.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Projet-SR03.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/action/SignInAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/action/SignInAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/action/createUserAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/action/createUserAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/dao/CompteDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/dao/CompteDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/dao/StagiaireDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/dao/StagiaireDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/db/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/db/Database.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/struts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/utilisateurs/Compte.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/utilisateurs/Compte.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.47.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/admin.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/createdUser.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/fail.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/formulaire-user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/formulaire-user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/stagiaire.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/action/SignInAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/action/createUserAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/dao/CompteDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/dao/StagiaireDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/db/Database.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-SR03/struts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/utilisateurs/Compte.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/SignInAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/SignInAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/createUserAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/createUserAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/CompteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/CompteDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/struts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/fail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,208 +85,124 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sr03@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sr03@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sr03@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sr03: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sr03@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sr03: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="administrateur: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sr03@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sr03: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="compte: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/formulaire-admin.jsp">
+        <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="25" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="25" />
+            <state relative-caret-position="225">
+              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/struts.xml">
+          <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/fail.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/CompteDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/action/SignInAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c9c89a3b-0555-455a-9e49-a68a21f1fc6f/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="6" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Controleurs/CreerUnUtilisateur.java">
+        <entry file="file://$PROJECT_DIR$/src/action/createUserAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="37" column="59" lean-forward="true" selection-start-line="37" selection-start-column="59" selection-end-line="37" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="495">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DAOs/UtilisateursDAO.java">
+        <entry file="file://$PROJECT_DIR$/src/dao/StagiaireDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="8" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DAOs/administrateurDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controleurs/CreerQuestion.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="uml://JAVA/Questionnaire">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>JAVA</ID>
-              <OriginalElement>Questionnaire</OriginalElement>
-              <nodes>
-                <node x="683.943253968254" y="214.0">Questionnaire.Question</node>
-                <node x="10.499999999999886" y="478.0">Utilisateurs.Stagiaire</node>
-                <node x="657.767857142857" y="0.0">Questionnaire.Reponse</node>
-                <node x="915.2690476190475" y="677.5">Questionnaire.Sujet</node>
-                <node x="256.09642857142853" y="653.0">Utilisateurs.Administrateur</node>
-                <node x="402.4999999999999" y="454.0">Utilisateurs.Compte</node>
-                <node x="814.4432539682539" y="466.0">Questionnaire.Questionnaire</node>
-                <node x="206.9999999999999" y="178.0">Utilisateurs.Utilisateur</node>
-                <node x="704.3853174603173" y="677.5">Parcours.Parcours</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="Parcours.Parcours" target="Questionnaire.Questionnaire">
-                  <point x="45.0" y="-52.0" />
-                  <point x="839.3853174603173" y="633.0" />
-                  <point x="933.9432539682539" y="633.0" />
-                  <point x="0.0" y="52.5" />
-                </edge>
-                <edge source="Utilisateurs.Administrateur" target="Questionnaire.Question">
-                  <point x="113.71428571428567" y="-76.5" />
-                  <point x="568.8107142857142" y="613.0" />
-                  <point x="760.3853174603173" y="613.0" />
-                  <point x="760.3853174603173" y="434.0" />
-                  <point x="746.443253968254" y="434.0" />
-                  <point x="-125.0" y="77.0" />
-                </edge>
-                <edge source="Utilisateurs.Administrateur" target="Questionnaire.Reponse">
-                  <point x="-170.57142857142856" y="-76.5" />
-                  <point x="284.525" y="633.0" />
-                  <point x="0.0" y="633.0" />
-                  <point x="0.0" y="153.0" />
-                  <point x="684.767857142857" y="153.0" />
-                  <point x="-54.0" y="64.0" />
-                </edge>
-                <edge source="Utilisateurs.Stagiaire" target="Utilisateurs.Utilisateur">
-                  <point x="-90.0" y="-40.5" />
-                  <point x="100.49999999999989" y="434.0" />
-                  <point x="233.42857142857133" y="434.0" />
-                  <point x="-158.57142857142856" y="113.0" />
-                </edge>
-                <edge source="Parcours.Parcours" target="Utilisateurs.Utilisateur">
-                  <point x="-45.0" y="-52.0" />
-                  <point x="749.3853174603173" y="603.0" />
-                  <point x="692.9242063492063" y="603.0" />
-                  <point x="692.9242063492063" y="424.0" />
-                  <point x="550.5714285714284" y="424.0" />
-                  <point x="158.57142857142856" y="113.0" />
-                </edge>
-                <edge source="Questionnaire.Sujet" target="Questionnaire.Questionnaire">
-                  <point x="0.0" y="-52.0" />
-                  <point x="1056.7690476190473" y="633.0" />
-                  <point x="1013.6099206349205" y="633.0" />
-                  <point x="79.66666666666663" y="52.5" />
-                </edge>
-                <edge source="Utilisateurs.Compte" target="Utilisateurs.Utilisateur">
-                  <point x="-69.0" y="-64.5" />
-                  <point x="471.4999999999999" y="434.0" />
-                  <point x="444.8571428571428" y="434.0" />
-                  <point x="52.85714285714289" y="113.0" />
-                </edge>
-                <edge source="Questionnaire.Questionnaire" target="Questionnaire.Question">
-                  <point x="59.750000000000114" y="-52.5" />
-                  <point x="993.693253968254" y="434.0" />
-                  <point x="996.443253968254" y="434.0" />
-                  <point x="125.0" y="77.0" />
-                </edge>
-                <edge source="Utilisateurs.Administrateur" target="Utilisateurs.Compte">
-                  <point x="56.857142857142776" y="-76.5" />
-                  <point x="511.9535714285713" y="603.0" />
-                  <point x="609.4999999999999" y="603.0" />
-                  <point x="69.0" y="64.5" />
-                </edge>
-                <edge source="Questionnaire.Question" target="Questionnaire.Reponse">
-                  <point x="93.74999999999989" y="-77.0" />
-                  <point x="965.1932539682539" y="153.0" />
-                  <point x="792.767857142857" y="153.0" />
-                  <point x="54.0" y="64.0" />
-                </edge>
-                <edge source="Utilisateurs.Administrateur" target="Utilisateurs.Utilisateur">
-                  <point x="-113.71428571428572" y="-76.5" />
-                  <point x="341.3821428571428" y="633.0" />
-                  <point x="380.9999999999999" y="633.0" />
-                  <point x="380.9999999999999" y="434.0" />
-                  <point x="339.14285714285705" y="434.0" />
-                  <point x="-52.85714285714283" y="113.0" />
-                </edge>
-                <edge source="Utilisateurs.Administrateur" target="Questionnaire.Questionnaire">
-                  <point x="170.57142857142856" y="-76.5" />
-                  <point x="625.6678571428571" y="623.0" />
-                  <point x="854.2765873015873" y="623.0" />
-                  <point x="-79.66666666666663" y="52.5" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="0.8" x="280.0" y="261.0" />
-              <SelectedNodes>
-                <node>Parcours.Parcours</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Fields</Category>
-                <Category>Constructors</Category>
-                <Category>Methods</Category>
-                <Category>Properties</Category>
-                <Category>Inner Classes</Category>
-              </Categories>
-              <SCOPE>All</SCOPE>
-              <VISIBILITY>private</VISIBILITY>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Parcours/Parcours.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Utilisateurs/Compte.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Utilisateurs/Stagiaire.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Questionnaire/Question.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+            <state relative-caret-position="1050">
+              <caret line="84" column="21" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -231,37 +212,80 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Tag Library Descriptor" />
+        <option value="struts_2_5" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ici</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="projetStruts" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/WEB-INF/formulaire.jsp" />
         <option value="$PROJECT_DIR$/web/formulaire.jsp" />
         <option value="$PROJECT_DIR$/src/users/User.java" />
         <option value="$PROJECT_DIR$/src/Questionnaire/question.java" />
         <option value="$PROJECT_DIR$/src/Utilisateurs/Utilisateur.java" />
         <option value="$PROJECT_DIR$/src/DB/database.java" />
-        <option value="$PROJECT_DIR$/src/DB/Database.java" />
         <option value="$PROJECT_DIR$/src/CreerUnUtilisateur.java" />
         <option value="$PROJECT_DIR$/src/Questionnaire/Questionnaire.java" />
         <option value="$PROJECT_DIR$/src/Questionnaire/Reponse.java" />
         <option value="$PROJECT_DIR$/src/Questionnaire/Sujet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/formulaire-question.jsp" />
         <option value="$PROJECT_DIR$/web/formulaire-admin.jsp" />
-        <option value="$PROJECT_DIR$/web/formulaire-user.jsp" />
         <option value="$PROJECT_DIR$/src/Questionnaire/Question.java" />
-        <option value="$PROJECT_DIR$/src/Controleurs/CreerQuestion.java" />
         <option value="$PROJECT_DIR$/src/Parcours/Parcours.java" />
         <option value="$PROJECT_DIR$/src/DAOs/administrateurDAO.java" />
-        <option value="$PROJECT_DIR$/src/Controleurs/CreerUnUtilisateur.java" />
         <option value="$PROJECT_DIR$/src/DAOs/UtilisateursDAO.java" />
+        <option value="$PROJECT_DIR$/src/Controleurs/CreerUnUtilisateur.java" />
+        <option value="$PROJECT_DIR$/src/questionnaire/Reponse.java" />
+        <option value="$PROJECT_DIR$/src/questionnaire/Question.java" />
+        <option value="$PROJECT_DIR$/src/Controleurs/CreerQuestion.java" />
+        <option value="$PROJECT_DIR$/src/db/ConfigConnection.java" />
+        <option value="$PROJECT_DIR$/src/DB/Database.java" />
+        <option value="$PROJECT_DIR$/Struts/lib/struts.xml.tld" />
+        <option value="$PROJECT_DIR$/src/dao/ParcoursDAO.java" />
+        <option value="$PROJECT_DIR$/src/dao/QuestionnaireDAO.java" />
+        <option value="$PROJECT_DIR$/src/dao/ReponseDAO.java" />
+        <option value="$PROJECT_DIR$/src/dao/QuestionDAO.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/Projet-SR03.iml" />
+        <option value="$PROJECT_DIR$/src/dao/DAO.java" />
+        <option value="$PROJECT_DIR$/src/dao/SujetDAO.java" />
+        <option value="$PROJECT_DIR$/src/controleurs/Controleur.java" />
+        <option value="$PROJECT_DIR$/src/utilisateurs/Utilisateur.java" />
+        <option value="$PROJECT_DIR$/src/utilisateurs/Administrateur.java" />
+        <option value="$PROJECT_DIR$/src/dao/AdministrateurDAO.java" />
+        <option value="$PROJECT_DIR$/src/utilisateurs/Stagiaire.java" />
+        <option value="$PROJECT_DIR$/sr03_bd.sql" />
+        <option value="$PROJECT_DIR$/web/stagiaire.jsp" />
+        <option value="c9c89a3b-0555-455a-9e49-a68a21f1fc6f/schema/sr03/table/compte.sql" />
+        <option value="$PROJECT_DIR$/src/db/Database.java" />
+        <option value="$PROJECT_DIR$/src/utilisateurs/Compte.java" />
+        <option value="$PROJECT_DIR$/web/admin.jsp" />
+        <option value="$PROJECT_DIR$/web/createdUser.jsp" />
+        <option value="$PROJECT_DIR$/web/formulaire-user.jsp" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/web/fail.jsp" />
+        <option value="$PROJECT_DIR$/src/struts.xml" />
+        <option value="$PROJECT_DIR$/src/action/SignInAction.java" />
+        <option value="$PROJECT_DIR$/src/dao/CompteDAO.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c9c89a3b-0555-455a-9e49-a68a21f1fc6f/console.sql" />
+        <option value="$PROJECT_DIR$/src/dao/StagiaireDAO.java" />
+        <option value="$PROJECT_DIR$/src/action/createUserAction.java" />
       </list>
     </option>
   </component>
@@ -273,9 +297,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="956" />
-    <option name="width" value="964" />
-    <option name="height" value="1040" />
+    <option name="x" value="243" />
+    <option name="y" value="142" />
+    <option name="width" value="946" />
+    <option name="height" value="517" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -291,55 +316,7 @@
             </path>
             <path>
               <item name="Projet-SR03" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-SR03" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projet-SR03" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-SR03" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controleurs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projet-SR03" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-SR03" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="DAOs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projet-SR03" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-SR03" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="DB" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projet-SR03" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-SR03" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Parcours" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projet-SR03" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-SR03" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Questionnaire" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projet-SR03" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-SR03" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Utilisateurs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projet-SR03" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-SR03" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projet-SR03" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-SR03" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -350,23 +327,34 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557216762099" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Projet1" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558527883990" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/commons-lang.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="users" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/web" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web" />
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="dao" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="users" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -474,18 +462,32 @@
       <workItem from="1554207275433" duration="81000" />
       <workItem from="1554209187395" duration="262000" />
       <workItem from="1554821007696" duration="11625000" />
-      <workItem from="1556723034783" duration="19576000" />
+      <workItem from="1556723034783" duration="22474000" />
+      <workItem from="1557226188728" duration="7585000" />
+      <workItem from="1557845577305" duration="2665000" />
+      <workItem from="1557849142814" duration="3511000" />
+      <workItem from="1558341955472" duration="1277000" />
+      <workItem from="1558447654455" duration="18123000" />
+      <workItem from="1558529822714" duration="84000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36872000" />
+    <option name="totallyTimeSpent" value="73015000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="0" width="1928" height="1044" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1920" height="1044" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5786026" visible="true" weight="0.27908218" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5786026" visible="true" weight="0.17929563" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -495,26 +497,28 @@
       <window_info id="Web" order="7" sideWeight="0.4213974" side_tool="true" weight="0.56153846" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969433" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.20414847" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994664" weight="0.4661572" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32969433" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32969433" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32969433" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053364" side_tool="true" weight="0.3242358" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3286026" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32969433" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32969433" />
+      <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32969433" />
+      <window_info anchor="bottom" id="Version Control" order="14" visible="true" weight="0.42030567" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.32969433" />
+      <window_info anchor="bottom" id="SQL Generator" order="16" show_stripe_button="false" weight="0.32969433" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32977587" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
@@ -556,271 +560,47 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/vueForm.jsp" />
-    <entry file="file://$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test" />
-    <entry file="file://$PROJECT_DIR$/Projet-SR03.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Questionnaire/réponse.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/users/User.java" />
-    <entry file="file://$PROJECT_DIR$/src/Parcours/parcour.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utilisateurs/compte.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Questionnaire/questionnaire.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utilisateurs/administrateur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utilisateurs/stagiaire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Questionnaire/sujet.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Questionnaire/question.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DB/database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utilisateurs/Utilisateur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JavaScript-modules-diagram//home/oxygene/DEV/SR03/Projet-SR03/src/DB;/home/oxygene/DEV/SR03/Projet-SR03/src/Parcours;/home/oxygene/DEV/SR03/Projet-SR03/src/Questionnaire;/home/oxygene/DEV/SR03/Projet-SR03/src/Utilisateurs;">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JavaScript-modules-diagram</ID>
-          <OriginalElement>$PROJECT_DIR$/src/DB;/home/oxygene/DEV/SR03/Projet-SR03/src/Parcours;/home/oxygene/DEV/SR03/Projet-SR03/src/Questionnaire;/home/oxygene/DEV/SR03/Projet-SR03/src/Utilisateurs;</OriginalElement>
-          <nodes />
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="675.5" y="279.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>All</Category>
-          </Categories>
-          <VISIBILITY>Details</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/Parcours">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>Parcours</OriginalElement>
-          <nodes>
-            <node x="" y="">Questionnaire</node>
-            <node x="" y="">DB.Database</node>
-            <node x="" y="">Parcours.Parcours</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="51.5" y="16.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Constructors</Category>
-            <Category>Methods</Category>
-            <Category>Inner Classes</Category>
-            <Category>Properties</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DB/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Questionnaire/Sujet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Questionnaire/Reponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Questionnaire/Questionnaire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="42" lean-forward="true" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/Utilisateurs">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>Utilisateurs</OriginalElement>
-          <nodes>
-            <node x="" y="">Questionnaire.Question</node>
-            <node x="" y="">Questionnaire.Reponse</node>
-            <node x="" y="">Utilisateurs.Stagiaire</node>
-            <node x="" y="">Questionnaire.Sujet</node>
-            <node x="" y="">Questionnaire.Questionnaire</node>
-            <node x="" y="">Utilisateurs.Administrateur</node>
-            <node x="" y="">Utilisateurs.Compte</node>
-            <node x="" y="">Controleurs.CreerUnUtilisateur</node>
-            <node x="" y="">Utilisateurs.Utilisateur</node>
-            <node x="" y="">Parcours.Parcours</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.6000000000000001" x="805.3888888888889" y="696.6666666666665" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Constructors</Category>
-            <Category>Fields</Category>
-            <Category>Properties</Category>
-            <Category>Inner Classes</Category>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utilisateurs/Stagiaire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/formulaire-user.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utilisateurs/Compte.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/formulaire-question.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Questionnaire/Question.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Parcours/Parcours.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/formulaire-admin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controleurs/CreerQuestion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAOs/administrateurDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JAVA/Questionnaire">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -845,6 +625,12 @@
               <point x="933.9432539682539" y="633.0" />
               <point x="0.0" y="52.5" />
             </edge>
+            <edge source="Questionnaire.Questionnaire" target="Questionnaire.Question">
+              <point x="59.750000000000114" y="-52.5" />
+              <point x="993.693253968254" y="434.0" />
+              <point x="996.443253968254" y="434.0" />
+              <point x="125.0" y="77.0" />
+            </edge>
             <edge source="Utilisateurs.Administrateur" target="Questionnaire.Question">
               <point x="113.71428571428567" y="-76.5" />
               <point x="568.8107142857142" y="613.0" />
@@ -867,6 +653,12 @@
               <point x="233.42857142857133" y="434.0" />
               <point x="-158.57142857142856" y="113.0" />
             </edge>
+            <edge source="Utilisateurs.Administrateur" target="Utilisateurs.Compte">
+              <point x="56.857142857142776" y="-76.5" />
+              <point x="511.9535714285713" y="603.0" />
+              <point x="609.4999999999999" y="603.0" />
+              <point x="69.0" y="64.5" />
+            </edge>
             <edge source="Parcours.Parcours" target="Utilisateurs.Utilisateur">
               <point x="-45.0" y="-52.0" />
               <point x="749.3853174603173" y="603.0" />
@@ -874,6 +666,12 @@
               <point x="692.9242063492063" y="424.0" />
               <point x="550.5714285714284" y="424.0" />
               <point x="158.57142857142856" y="113.0" />
+            </edge>
+            <edge source="Questionnaire.Question" target="Questionnaire.Reponse">
+              <point x="93.74999999999989" y="-77.0" />
+              <point x="965.1932539682539" y="153.0" />
+              <point x="792.767857142857" y="153.0" />
+              <point x="54.0" y="64.0" />
             </edge>
             <edge source="Questionnaire.Sujet" target="Questionnaire.Questionnaire">
               <point x="0.0" y="-52.0" />
@@ -886,24 +684,6 @@
               <point x="471.4999999999999" y="434.0" />
               <point x="444.8571428571428" y="434.0" />
               <point x="52.85714285714289" y="113.0" />
-            </edge>
-            <edge source="Questionnaire.Questionnaire" target="Questionnaire.Question">
-              <point x="59.750000000000114" y="-52.5" />
-              <point x="993.693253968254" y="434.0" />
-              <point x="996.443253968254" y="434.0" />
-              <point x="125.0" y="77.0" />
-            </edge>
-            <edge source="Utilisateurs.Administrateur" target="Utilisateurs.Compte">
-              <point x="56.857142857142776" y="-76.5" />
-              <point x="511.9535714285713" y="603.0" />
-              <point x="609.4999999999999" y="603.0" />
-              <point x="69.0" y="64.5" />
-            </edge>
-            <edge source="Questionnaire.Question" target="Questionnaire.Reponse">
-              <point x="93.74999999999989" y="-77.0" />
-              <point x="965.1932539682539" y="153.0" />
-              <point x="792.767857142857" y="153.0" />
-              <point x="54.0" y="64.0" />
             </edge>
             <edge source="Utilisateurs.Administrateur" target="Utilisateurs.Utilisateur">
               <point x="-113.71428571428572" y="-76.5" />
@@ -936,22 +716,419 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAOs/UtilisateursDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/DAOs/UtilisateursDAO.java" />
+    <entry file="file://$PROJECT_DIR$/src/Controleurs/CreerUnUtilisateur.java" />
+    <entry file="file://$PROJECT_DIR$/src/DAOs/administrateurDAO.java" />
+    <entry file="file://$PROJECT_DIR$/src/questionnaire/Questionnaire.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="8" />
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controleurs/CreerUnUtilisateur.java">
+    <entry file="file://$PROJECT_DIR$/src/questionnaire/Question.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="37" column="59" lean-forward="true" selection-start-line="37" selection-start-column="59" selection-end-line="37" selection-end-column="59" />
+        <state relative-caret-position="165">
+          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/ConfigConnection.java" />
+    <entry file="file://$PROJECT_DIR$/src/Controleurs/Controleur.java" />
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="" y="">utilisateurs.Stagiaire</node>
+            <node x="" y="">questionnaire.Reponse</node>
+            <node x="" y="">dao.SujetDAO</node>
+            <node x="" y="">dao.ParcoursDAO</node>
+            <node x="" y="">dao.AdministrateurDAO</node>
+            <node x="" y="">dao.QuestionDAO</node>
+            <node x="" y="">questionnaire.Questionnaire</node>
+            <node x="" y="">questionnaire.Sujet</node>
+            <node x="" y="">dao.QuestionnaireDAO</node>
+            <node x="" y="">Controleurs.Controleur</node>
+            <node x="" y="">dao.DAO</node>
+            <node x="" y="">dao.StagiaireDAO</node>
+            <node x="" y="">parcours.Parcours</node>
+            <node x="" y="">DB.Database</node>
+            <node x="" y="">questionnaire.Question</node>
+            <node x="" y="">utilisateurs.Administrateur</node>
+            <node x="" y="">dao.ReponseDAO</node>
+            <node x="" y="">utilisateurs.Utilisateur</node>
+            <node x="" y="">utilisateurs.Compte</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.40000000000000013" x="1394.0" y="801.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram//home/oxygene/DEV/SR03/Projet-SR03/src/Controleurs;/home/oxygene/DEV/SR03/Projet-SR03/src/dao;/home/oxygene/DEV/SR03/Projet-SR03/src/DB;/home/oxygene/DEV/SR03/Projet-SR03/src/db;/home/oxygene/DEV/SR03/Projet-SR03/src/parcours;/home/oxygene/DEV/SR03/Projet-SR03/src/questionnaire;/home/oxygene/DEV/SR03/Projet-SR03/src/utilisateurs;">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src/Controleurs;/home/oxygene/DEV/SR03/Projet-SR03/src/dao;/home/oxygene/DEV/SR03/Projet-SR03/src/DB;/home/oxygene/DEV/SR03/Projet-SR03/src/db;/home/oxygene/DEV/SR03/Projet-SR03/src/parcours;/home/oxygene/DEV/SR03/Projet-SR03/src/questionnaire;/home/oxygene/DEV/SR03/Projet-SR03/src/utilisateurs;</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="673.0" y="430.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Struts/lib/struts.xml.tld" />
+    <entry file="file://$PROJECT_DIR$/UML aiman ZAKI jeremy LEVET.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/questionnaire/Reponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DB/Database.java" />
+    <entry file="file://$PROJECT_DIR$/Projet-SR03.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controleurs/Controleur.java" />
+    <entry file="file://$PROJECT_DIR$/src/dao/ReponseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="44" column="17" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/QuestionnaireDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="36" column="54" lean-forward="true" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/QuestionDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/AdministrateurDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/DAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/ParcoursDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="44" column="17" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/javassist.jar!/javassist/ClassPool.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/SujetDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/Struts/lib/struts2-core.jar!/org/apache/struts2/factory/StrutsActionProxy.class" />
+    <entry file="file://$PROJECT_DIR$/src/utilisateurs/Administrateur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="26" column="36" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="36" />
+          <folding>
+            <element signature="e#898#899#0" expanded="true" />
+            <element signature="e#925#926#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://c9c89a3b-0555-455a-9e49-a68a21f1fc6f/schema/sr03/table/compte.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="20" lean-forward="true" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/formulaire-admin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/formulaire-question.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utilisateurs/Stagiaire.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/Struts/lib/struts2-core.jar!/org/apache/struts2/dispatcher/filter/StrutsPrepareAndExecuteFilter.class" />
+    <entry file="file://$PROJECT_DIR$/src/utilisateurs/Compte.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="36" column="26" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utilisateurs/Utilisateur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/formulaire-user.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/createdUser.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/Struts/lib/struts2-core.jar!/com/opensymphony/xwork2/DefaultActionInvocation.class" />
+    <entry file="file://$PROJECT_DIR$/sr03_bd.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="67" column="62" lean-forward="true" selection-start-line="67" selection-start-column="62" selection-end-line="67" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/stagiaire.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://c9c89a3b-0555-455a-9e49-a68a21f1fc6f/schema/sr03/table/stagiaire">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_CONFIG_DIR$/jdbc-drivers/MySQL Connector/J/5.1.47/mysql-connector-java-5.1.47.jar!/com/mysql/jdbc/SQLError.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3312">
+          <caret line="607" column="43" lean-forward="true" selection-start-line="607" selection-start-column="43" selection-end-line="607" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/struts.xml">
+      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/fail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/CompteDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/action/SignInAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c9c89a3b-0555-455a-9e49-a68a21f1fc6f/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/StagiaireDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="84" column="21" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/action/createUserAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>Projet-SR03:war exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Struts 2 (Projet-SR03)|Struts 2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Projet-SR03</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Struts 2-2.5.14.1</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

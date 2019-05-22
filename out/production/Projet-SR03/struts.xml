@@ -6,9 +6,9 @@
 <struts>
 <package name="action" extends="struts-default">
     <action name="SignIn" class="action.SignInAction">
+        <result name="unknown">admin.jsp</result>
         <result name="admin">admin.jsp</result>
-        <result name="stagiaire">stagiaire.jsp</result>
-        <result name="unknown">fail.jsp</result>
+        <result name="stagiaire">fail.jsp</result>
     </action>
 
     <action name="createUserAction" class="action.createUserAction">

@@ -12,15 +12,6 @@ import java.util.Map;
 public class createUserAction extends ActionSupport implements SessionAware {
     Stagiaire stagiaire = new Stagiaire();
     private Boolean admin;
-
-    public Stagiaire getStagiaire() {
-        return stagiaire;
-    }
-
-    public void setStagiaire(Stagiaire stagiaire) {
-        this.stagiaire = stagiaire;
-    }
-
     public createUserAction(){
         System.out.println(stagiaire);
         admin = false;

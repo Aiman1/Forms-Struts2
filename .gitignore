@@ -1,0 +1,3 @@
+#ignore les dossier ./out et ./idea
+./idea/
+./out/

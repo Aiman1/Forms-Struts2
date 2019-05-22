@@ -7,6 +7,11 @@
         <element id="directory" name="classes">
           <element id="module-output" name="Projet-SR03" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Struts 2-2.5.14.1" />
+          <element id="library" level="project" name="javassist" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.47" />
+        </element>
       </element>
     </root>
   </artifact>

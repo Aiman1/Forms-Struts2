@@ -11,17 +11,10 @@ public class SignInAction extends ActionSupport implements SessionAware {
 
     Compte compte = new Compte();
 
-    public Compte getCompte() {
-        return compte;
-    }
-
-    public void setCompte(Compte compte) {
-        this.compte = compte;
-    }
-
+    private Boolean admin;
 
     public SignInAction(){
-
+        admin = false;
     }
 
     public String execute(){
