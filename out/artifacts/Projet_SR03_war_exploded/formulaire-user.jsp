@@ -12,24 +12,25 @@
     <title>Création d'utillisateurs</title>
 </head>
 <body>
+
 <s:form action="createUserAction">
-    <label> First name </label>
-    <input type="text" id="frname" name="User first name" />
+    <label> last name </label>
+    <input type="text" id="frname" name="Stagiaire.family_name" />
     <br>
-    <label> Family name </label>
-    <input type="text" id="faname" name="User family name" />
+    <label> first name </label>
+    <input type="text" id="faname" name="Stagiaire.first_name" />
     <br>
-    <label> Email </label>
-    <input type="email" id="email" name="User email" />
+    <label> tel </label>
+    <input type="email" id="email" name="Stagiaire.tel" />
     <br>
-    <label> Password </label>
-    <input type="password" id="psw" name="User password" />
+    <label> Société </label>
+    <input type="password" id="psw" name="Stagiaire.societe" />
     <br>
     <label> male </label>
-    <input type="radio" id="male" name="gender" value="male" checked/>
+    <input type="radio" id="male" name="Stagiaire.gender" value="male" checked/>
     <br>
     <label> female </label>
-    <input type="radio" id="female" name="gender" value="female" />
+    <input type="radio" id="female" name="Stagiaire.gender" value="female" />
     <br>
     <s:submit value="envoyer"/>
 </s:form>

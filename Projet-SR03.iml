@@ -31,5 +31,6 @@
     <orderEntry type="library" name="Struts 2-2.5.14.1" level="project" />
     <orderEntry type="library" name="javassist" level="project" />
     <orderEntry type="library" name="javassist" level="project" />
+    <orderEntry type="library" name="mysql-connector-java-5.1.47" level="project" />
   </component>
 </module>
