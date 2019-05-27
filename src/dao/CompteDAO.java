@@ -37,17 +37,17 @@ public class CompteDAO implements DAO<Compte> {
         return 0;
     }
 
-    public boolean isStagiaire(Compte compte) {
+    public boolean isAdmin(Compte compte) {
         System.out.println("-----------------------------");
         System.out.println(compte.toString());
         System.out.println("-----------------------------");
         Connection db = Database.getConnection();
         try {
-            String sqlText = "SELECT * FROM compte WHERE email = ? AND mdp = ?";
+            String sqlText = "SELECT * FROM administrateur INNER JOIN compte ON administrateur.compte = compte.id WHERE email = ? AND mdp = ? ;";
 
             PreparedStatement sql = db.prepareStatement(sqlText);
             sql.setString(1,compte.getEmail());
-            sql.setString(1,compte.getMdp());
+            sql.setString(2,compte.getMdp());
             ResultSet res = sql.executeQuery();
             if (res.next())
                 return true;
@@ -57,7 +57,20 @@ public class CompteDAO implements DAO<Compte> {
         return false;
     }
 
-    public boolean isAdmin(Compte compte) {
+    public boolean isStagiaire(Compte compte) {
+        Connection db = Database.getConnection();
+        try {
+        String sqlText = "SELECT * FROM stagiaire INNER JOIN compte ON stagiaire.compte = compte.id WHERE email = ? AND mdp = ? ;";
+
+        PreparedStatement sql = db.prepareStatement(sqlText);
+        sql.setString(1,compte.getEmail());
+        sql.setString(2,compte.getMdp());
+        ResultSet res = sql.executeQuery();
+        if (res.next())
+            return true;
+        } catch (SQLException e1) {
+            e1.printStackTrace();
+        }
         return false;
     }
 }

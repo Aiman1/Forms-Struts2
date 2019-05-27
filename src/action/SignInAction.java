@@ -31,4 +31,8 @@ public class SignInAction extends ActionSupport implements SessionAware {
     public void setSession(Map<String, Object> map) {
 
     }
+
+    public void setCompte(Compte compte) {
+        this.compte = compte;
+    }
 }
