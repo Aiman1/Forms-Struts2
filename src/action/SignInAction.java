@@ -1,22 +1,41 @@
 package action;
 
+import com.opensymphony.xwork2.ActionSupport;
 import dao.CompteDAO;
+import org.apache.struts2.interceptor.SessionAware;
 import utilisateurs.Compte;
 
-public class SignInAction {
+import java.util.Map;
+
+public class SignInAction extends ActionSupport implements SessionAware {
 
     Compte compte = new Compte();
-    private Boolean admin;
+
+    public Compte getCompte() {
+        return compte;
+    }
+
+    public void setCompte(Compte compte) {
+        this.compte = compte;
+    }
+
 
     public SignInAction(){
-        admin = false;
+
     }
 
     public String execute(){
-        System.out.println("user"+compte);
-        if (new CompteDAO().find(compte) == true)
-            return "success";
+        CompteDAO dao = new CompteDAO();
+        if (dao.isAdmin(compte))
+            return "admin";
+        else if(dao.isStagiaire(compte))
+            return "stagiaire";
         else
-            return "failure";
+            return "unknown";
+    }
+
+    @Override
+    public void setSession(Map<String, Object> map) {
+
     }
 }

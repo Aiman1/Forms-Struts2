@@ -37,13 +37,40 @@ public class CompteDAO implements DAO<Compte> {
         return 0;
     }
 
-    public boolean find(Compte compte) {
+    public boolean isAdmin(Compte compte) {
+        System.out.println("-----------------------------");
+        System.out.println(compte.toString());
+        System.out.println("-----------------------------");
         Connection db = Database.getConnection();
         try {
-            String sqlText = "SELECT * FROM COMPTE WHERE login= ? AND mdp = ?";
+            String sqlText = "SELECT * FROM administrateur INNER JOIN compte ON administrateur.compte = compte.id WHERE email = ? AND mdp = ?";
             PreparedStatement sql = db.prepareStatement(sqlText);
             sql.setString(1,compte.getEmail());
-            sql.setString(1,compte.getMdp());
+            sql.setString(2,compte.getMdp());
+            System.out.println(sql.toString());
+            ResultSet res = sql.executeQuery();
+            System.out.println(res);
+            if (res.next())
+                return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean isStagiaire(Compte compte) {
+        System.out.println("-----------------------------");
+        System.out.println(compte.toString());
+        System.out.println("-----------------------------");
+        Connection db = Database.getConnection();
+
+        try {
+            String sqlText = "SELECT * FROM stagiaire INNER JOIN compte ON stagiaire.compte = compte.id WHERE email = ? AND mdp = ?";
+
+            PreparedStatement sql = db.prepareStatement(sqlText);
+            sql.setString(1,compte.getEmail());
+            sql.setString(2,compte.getMdp());
+            System.out.println(sql.toString());
             ResultSet res = sql.executeQuery();
             if (res.next())
                 return true;

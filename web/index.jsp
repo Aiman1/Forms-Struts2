@@ -14,10 +14,10 @@
 <body>
 <s:form action="SignIn">
   <label> Email </label>
-  <input type="email" id="email" name="email" />
+  <input type="email" id="Compte.mdp" name="Compte.email" />
   <br>
   <label> Password </label>
-  <input type="password" id="mdp" name="mdp" />
+  <input type="password" id="Compte.mdp" name="Compte.mdp" />
   <br>
   <s:submit value="envoyer"/>
 </s:form>

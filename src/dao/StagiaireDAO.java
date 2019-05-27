@@ -77,14 +77,14 @@ public class StagiaireDAO implements DAO<Stagiaire>{
 			            preparedStmt.setBoolean (6, t.isActif());
 			            preparedStmt.setInt(7, t.getCompte().getId());
 
-			            preparedStmt.execute();
+			preparedStmt.execute();
+			return 1;
 		}
 		catch (SQLException e) {
 		// TODO Auto-generated catch block
 			e.printStackTrace();
 			return 0;
 		}
-		return 1;
 	}
 
 	@Override
