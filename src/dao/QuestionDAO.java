@@ -1,12 +1,18 @@
 package dao;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import db.Database;
 import questionnaire.Question;
+import questionnaire.Questionnaire;
+import questionnaire.Sujet;
 
 public class QuestionDAO implements DAO<Question>{
 	private static Connection db;
@@ -17,31 +23,91 @@ public class QuestionDAO implements DAO<Question>{
 
 	@Override
 	public Optional<Question> get(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		Question question = null;
+		try {
+			Statement sql = db.createStatement();
+			String sqlText = "SELECT * FROM Question WHERE id = " + id;
+			ResultSet res = sql.executeQuery(sqlText);
+			if(res.next()) {
+				question = new Question((int)id, res.getString("intitule"), res.getBoolean("statut"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return Optional.ofNullable(question);
 	}
 
 	@Override
 	public List<Question> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Question> l = new ArrayList<Question>();
+        try {
+			Statement st = db.createStatement();
+			ResultSet res = st.executeQuery("select * from Question" );
+			Sujet sujet = null;
+			
+			while(res.next()){ 
+				
+			    l.add(new Question(res.getInt("id"), res.getString("intitule"), res.getBoolean("statut")));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+
+    
+        return l;
 	}
 
 	@Override
 	public int create(Question t) {
-		// TODO Auto-generated method stub
-		return 0;
+		try{
+			Statement sql = db.createStatement();
+			String query = " insert into Question (intitule, statut)"
+			        + " values (?, ?)";
+
+			            PreparedStatement preparedStmt = db.prepareStatement(query);
+			            preparedStmt.setString(1, t.getIntitule());
+			            preparedStmt.setBoolean(2, t.getStatut());
+
+			            preparedStmt.execute();
+		}
+		catch (SQLException e) {
+		// TODO Auto-generated catch block
+			e.printStackTrace();
+			return 0;
+		}
+		return 1;
 	}
 
 	@Override
 	public int update(Question t, String[] params) {
-		// TODO Auto-generated method stub
+		try{
+			String query = " update Question set (intitule = ?, sujet = ?)";
+
+			            PreparedStatement preparedStmt = db.prepareStatement(query);
+			            preparedStmt.setString (1, t.getIntitule());
+			            preparedStmt.setBoolean (2, t.getStatut());
+			            preparedStmt.execute();
+		}
+		catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+		}
 		return 0;
 	}
 
 	@Override
 	public int delete(Question t) {
-		// TODO Auto-generated method stub
+		try {
+			Statement sql = db.createStatement();
+			String sqlText = "DELETE FROM Question WHERE id = " + t.getId();
+			ResultSet res = sql.executeQuery(sqlText);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return 0;
 	}
 

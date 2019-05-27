@@ -1,11 +1,13 @@
 package action;
 
+import java.sql.SQLException;
+
 import dao.StagiaireDAO;
 import utilisateurs.Stagiaire;
 import utilisateurs.Utilisateur;
 
 public class createUserAction {
-    Utilisateur user = new Stagiaire();
+    Stagiaire user = new Stagiaire();
     private Boolean admin;
     public createUserAction(){
         admin = false;
@@ -18,10 +20,16 @@ public class createUserAction {
             return "failure";
         }
         else {
-            if (new StagiaireDAO().create(user) == 1)
-                return "success";
-            else
-                return "failure";
+            try {
+				if (new StagiaireDAO().create(user) == 1)
+				    return "success";
+				else
+				    return "failure";
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				return e.toString();
+			}
         }
     }
 }

@@ -25,16 +25,16 @@ public class AdministrateurDAO implements DAO<Administrateur>{
 	@Override
 	public Optional<Administrateur> get(long id) throws SQLException {
 		Statement sql = db.createStatement();
-		String sqlText = "SELECT * FROM Compte WHERE id = " + id;
+		String sqlText = "SELECT * FROM Administrateur WHERE id = " + id;
 		ResultSet res = sql.executeQuery(sqlText);
-		Compte compte = null;
-		if(res.next()) {
-			compte = new Compte(res.getString("email"), res.getString("mdp"));
-		}
-		sqlText = "SELECT * FROM Administrateur WHERE id = " + id;
-		res = sql.executeQuery(sqlText);
 		Administrateur admin = null;
 		if(res.next()) {
+			String sqlText2 = "SELECT * FROM Compte WHERE id = " + res.getInt("compte");
+			ResultSet res2 = sql.executeQuery(sqlText2);
+			Compte compte = null;
+			if(res2.next()) {
+				compte = new Compte(res.getInt("compte"), res2.getString("email"), res2.getString("mdp"));
+			}
 			admin = new Administrateur((int)id, res.getString("family_name"), res.getString("first_name"), res.getString("tel"), res.getString("societe"), res.getString("gender"), res.getBoolean("actif"), compte);
 		}
 		
@@ -51,7 +51,7 @@ public class AdministrateurDAO implements DAO<Administrateur>{
         while(res.next()){ 
         	ResultSet resCpt = st.executeQuery("select * from compte where id =" + res.getInt("compte"));
     		if(resCpt.next()) {
-    			compte = new Compte(resCpt.getString("email"), resCpt.getString("mdp"));
+    			compte = new Compte(res.getInt("compte"), resCpt.getString("email"), resCpt.getString("mdp"));
     		}
             l.add(new Administrateur(res.getInt("id"), res.getString("family_name"), res.getString("first_name"), res.getString("tel"), res.getString("societe"), res.getString("gender"), res.getBoolean("actif"), compte));
         } 
@@ -64,20 +64,17 @@ public class AdministrateurDAO implements DAO<Administrateur>{
 	public int create(Administrateur t) throws SQLException{
 		try{
 			Statement sql = db.createStatement();
-			String sqlText = "SELECT Max(id) FROM Compte";
-			ResultSet res = sql.executeQuery(sqlText);
-			int idCompte = res.getInt("id");
-			String query = " insert into Administrateur (id, family_name, first_name, tel, societe, gender, actif)"
+			String query = " insert into Administrateur (family_name, first_name, tel, societe, gender, actif, compte)"
 			        + " values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 			            PreparedStatement preparedStmt = db.prepareStatement(query);
-			            preparedStmt.setInt (1, idCompte);
-			            preparedStmt.setString (2, t.getFamily_name());
-			            preparedStmt.setString (3, t.getFirst_name());
-			            preparedStmt.setString (4, t.getTel());
-			            preparedStmt.setString (5, t.getSociete());
-			            preparedStmt.setString (6, t.getGender());
-			            preparedStmt.setBoolean (7, t.isActif());
+			            preparedStmt.setString (1, t.getFamily_name());
+			            preparedStmt.setString (2, t.getFirst_name());
+			            preparedStmt.setString (3, t.getTel());
+			            preparedStmt.setString (4, t.getSociete());
+			            preparedStmt.setString (5, t.getGender());
+			            preparedStmt.setBoolean (6, t.isActif());
+			            preparedStmt.setInt(7, t.getCompte().getId());
 
 			            preparedStmt.execute();
 		}

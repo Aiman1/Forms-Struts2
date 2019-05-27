@@ -1,7 +1,8 @@
 package utilisateurs;
 
 public class Compte {
-    private String email;
+    private int id;
+	private String email;
     private String mdp;
     private Utilisateur creePar;
     private static int nbComptes = 0;
@@ -10,13 +11,24 @@ public class Compte {
 
 	}
 
-    public Compte(String email,String mdp){
+    public Compte(int id,String email,String mdp){
         assert(mdp.length() >= 6);
+        this.id=id;
         this.email = email;
         this.mdp = mdp;
         nbComptes++;
         //this.creePar = creePar;
     }
+
+    
+    
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public String getEmail() {
 		return email;

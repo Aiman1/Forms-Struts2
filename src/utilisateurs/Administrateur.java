@@ -16,14 +16,8 @@ public class Administrateur extends Utilisateur {
 	}
 
 
-	public Compte creerCompte() {
-        return new Compte("","");
-    }
 
     
-    public void authentification(String addrMail, String pwd) {
-
-    }
     public void modifierOrdreReponse(Question q){
         ArrayList<Reponse> reponses = q.getReponses();
     }
