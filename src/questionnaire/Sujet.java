@@ -8,6 +8,13 @@ public class Sujet {
     private int id;
     private String sujet;
     private List<Questionnaire> questionnaires;
+    
+    
+	public Sujet(int id, String sujet) {
+		this.id = id;
+		this.sujet = sujet;
+	}
+	
 	public int getId() {
 		return id;
 	}

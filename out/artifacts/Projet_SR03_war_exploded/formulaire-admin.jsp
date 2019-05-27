@@ -16,7 +16,7 @@
 
 <body>
 <div>TODO write content</div>
-<form action="Controleurs/CreerUnUtilisateur" method="post">
+<form action="CreerUnUtilisateur" method="post">
     <label> First name </label>
     <input type="text" id="frname" name="User first name" />
     <br>
