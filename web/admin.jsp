@@ -11,7 +11,10 @@
     <title>Title</title>
 </head>
 <body>
-
+<%
+    String user =  (String) session.get("admin");
+%>
+<s:property value="#session.user" />
 <a href="formulaire-user.jsp">creer utilisateur</a>
 <a href="">lister utilisateur</a>
 

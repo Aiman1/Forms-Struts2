@@ -27,7 +27,7 @@ public class Database {
         }
     }
     public static Connection getConnection(){
-        System.out.println("----------------------------------------------------------ici-------------------------------");
+        System.out.println("-----------------------------\n Base de données chargées \n -------------------------------");
         return connection;
     }
 }

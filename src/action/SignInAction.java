@@ -9,27 +9,37 @@ import java.util.Map;
 
 public class SignInAction extends ActionSupport implements SessionAware {
 
-    Compte compte = new Compte();
+    private Compte compte = new Compte();
 
-    private Boolean admin;
+    private Map<String, Object> session;
+
 
     public SignInAction(){
-        admin = false;
+
     }
 
     public String execute(){
         CompteDAO dao = new CompteDAO();
-        if (dao.isAdmin(compte))
+        if (dao.isAdmin(compte)) {
+            session.put("admin", true);
+            session.put("user",dao.getName(compte));
             return "admin";
-        else if(dao.isStagiaire(compte))
+        }
+        else if(dao.isStagiaire(compte)) {
+            session.put("admin", false);
+            session.put("user",dao.getName(compte));
             return "stagiaire";
-        else
+        }
+        else {
+            session.put("unknown", true);
+            session.put("user","not connected");
             return "unknown";
+        }
     }
 
     @Override
     public void setSession(Map<String, Object> map) {
-
+        this.session = map;
     }
 
     public void setCompte(Compte compte) {

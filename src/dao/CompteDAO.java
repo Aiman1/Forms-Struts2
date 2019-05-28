@@ -73,5 +73,26 @@ public class CompteDAO implements DAO<Compte> {
         }
         return false;
     }
+    public String getName(Compte compte) {
+        Connection db = Database.getConnection();
+        try{
+            String query;
+            if(isAdmin(compte))
+                query = "SELECT family_name, first_name FROM administrateur INNER JOIN compte ON administrateur.compte = compte.id WHERE email = ? AND mdp = ? ;";
+            else if(isStagiaire(compte))
+                query = "SELECT family_name, first_name FROM stagiaire INNER JOIN compte ON stagiaire.compte = compte.id WHERE email = ? AND mdp = ? ;";
+            else
+                return "non connecté";
+
+            PreparedStatement sql = db.prepareStatement(query);
+            sql.setString(1,compte.getEmail());
+            sql.setString(2,compte.getMdp());
+            return String.valueOf(sql.executeQuery());
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+            return "probleme survenu";
+        }
+    }
     
 }

@@ -4,22 +4,22 @@ import com.opensymphony.xwork2.ActionSupport;
 import dao.StagiaireDAO;
 import org.apache.struts2.interceptor.SessionAware;
 import utilisateurs.Stagiaire;
-import utilisateurs.Utilisateur;
 
 import java.sql.SQLException;
 import java.util.Map;
 
 public class createUserAction extends ActionSupport implements SessionAware {
-    Stagiaire stagiaire = new Stagiaire();
-    private Boolean admin;
+    private Stagiaire stagiaire = new Stagiaire();
+
+    private Map<String, Object> session;
+
     public createUserAction(){
-        System.out.println(stagiaire);
-        admin = false;
+
     }
 
     public String execute(){
-        //System.out.println("user" + stagiaire);
-        if (admin){
+        System.out.println("user" + stagiaire);
+        if (session.get("admin").equals(true)){
             //TODO
             return "failure";
         }
@@ -38,6 +38,6 @@ public class createUserAction extends ActionSupport implements SessionAware {
 
     @Override
     public void setSession(Map<String, Object> map) {
-
+        this.session = map;
     }
 }
