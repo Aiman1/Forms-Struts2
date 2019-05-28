@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 28 mai 2019 à 08:31
+-- Généré le :  mar. 28 mai 2019 à 16:29
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.14
 
@@ -66,8 +66,17 @@ CREATE TABLE IF NOT EXISTS `question` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `intitule` varchar(25) COLLATE latin1_general_ci NOT NULL,
   `statut` tinyint(1) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+  `questionnaire` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `cleQuestionnaire` (`questionnaire`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+
+--
+-- Déchargement des données de la table `question`
+--
+
+INSERT INTO `question` (`id`, `intitule`, `statut`, `questionnaire`) VALUES
+(1, 'question test 1 ?', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -83,7 +92,14 @@ CREATE TABLE IF NOT EXISTS `questionnaire` (
   `intitule` varchar(25) COLLATE latin1_general_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `cleSujet` (`sujet`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+
+--
+-- Déchargement des données de la table `questionnaire`
+--
+
+INSERT INTO `questionnaire` (`id`, `statut`, `sujet`, `intitule`) VALUES
+(1, 1, 1, 'questionnaire sujet 1');
 
 -- --------------------------------------------------------
 
@@ -100,7 +116,17 @@ CREATE TABLE IF NOT EXISTS `reponse` (
   `question` int(5) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `cleQuestion` (`question`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+
+--
+-- Déchargement des données de la table `reponse`
+--
+
+INSERT INTO `reponse` (`id`, `intitule`, `statut`, `bonne`, `question`) VALUES
+(1, 'reponse1', 1, 0, 1),
+(2, 'reponse 2', 1, 1, 1),
+(3, 'rep3', 1, 0, 1),
+(4, 'rep4', 1, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -133,7 +159,15 @@ CREATE TABLE IF NOT EXISTS `sujet` (
   `id` int(5) NOT NULL AUTO_INCREMENT,
   `sujet` varchar(25) COLLATE latin1_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+
+--
+-- Déchargement des données de la table `sujet`
+--
+
+INSERT INTO `sujet` (`id`, `sujet`) VALUES
+(1, 'sujet1'),
+(2, 'sujet2');
 
 --
 -- Contraintes pour les tables déchargées
@@ -144,6 +178,12 @@ CREATE TABLE IF NOT EXISTS `sujet` (
 --
 ALTER TABLE `administrateur`
   ADD CONSTRAINT `cleCompteAdmin` FOREIGN KEY (`compte`) REFERENCES `compte` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Contraintes pour la table `question`
+--
+ALTER TABLE `question`
+  ADD CONSTRAINT `cleQuestionnaire` FOREIGN KEY (`questionnaire`) REFERENCES `questionnaire` (`id`);
 
 --
 -- Contraintes pour la table `questionnaire`

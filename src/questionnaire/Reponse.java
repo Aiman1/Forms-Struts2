@@ -5,16 +5,16 @@ public class Reponse {
     private String intitule;
     private Boolean statut;
     private Boolean bonne;
-    private Question question;
+    private int idQuestion;
     
     
-	public Reponse(int id, String intitule, Boolean statut, Boolean bonne, Question question) {
+	public Reponse(int id, String intitule, Boolean statut, Boolean bonne, int question) {
 		super();
 		this.id = id;
 		this.intitule = intitule;
 		this.statut = statut;
 		this.bonne = bonne;
-		this.question = question;
+		this.idQuestion = question;
 	}
 	
 	public int getId() {
@@ -41,15 +41,17 @@ public class Reponse {
 	public void setBonne(Boolean bonne) {
 		this.bonne = bonne;
 	}
-
-	public Question getQuestion() {
-		return question;
+	
+    public int getIdQuestion() {
+		return idQuestion;
 	}
 
-	public void setQuestion(Question question) {
-		this.question = question;
+	public void setIdQuestion(int idQuestion) {
+		this.idQuestion = idQuestion;
 	}
-    
-    
+
+	public String toString() {
+    	System.out.println("id : " + id + ", intitule : " + intitule);
+    }
 
 }
