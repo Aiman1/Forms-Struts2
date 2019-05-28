@@ -11,82 +11,24 @@
     </loaded-modules>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffb7f208-f7f0-42bc-81c7-884640e8fd4f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/CreerUnUtilisateur.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/javassist.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_47.xml" beforeDir="false" />
+    <list default="true" id="ffb7f208-f7f0-42bc-81c7-884640e8fd4f" name="Default Changelist" comment="modif des requetes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/javassist.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/action/SignInAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/action/SignInAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/action/createUserAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/action/createUserAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/dao/AdministrateurDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/dao/CompteDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/dao/CompteDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/dao/DAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/dao/ParcoursDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/dao/QuestionDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/dao/QuestionnaireDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/dao/ReponseDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/dao/StagiaireDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/dao/SujetDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/db/Database.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/parcours/Parcours.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/questionnaire/Question.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/questionnaire/Questionnaire.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/questionnaire/Reponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/questionnaire/Sujet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/struts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/utilisateurs/Administrateur.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/utilisateurs/Compte.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/utilisateurs/Stagiaire.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/utilisateurs/Utilisateur.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/lib/commons-fileupload.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/lib/commons-io.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/lib/commons-lang.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/lib/freemarker.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/lib/javassist.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/lib/log4j.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.47.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/lib/ognl.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/lib/struts2-core.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projet-SR03.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Projet-SR03.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/admin.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/createdUser.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/fail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/fail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/formulaire-admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/formulaire-admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/formulaire-question.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/formulaire-user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/formulaire-user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/stagiaire.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/action/SignInAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-SR03/action/SignInAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/action/createUserAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-SR03/action/createUserAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/dao/AdministrateurDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/dao/CompteDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-SR03/dao/CompteDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/dao/QuestionDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/dao/QuestionnaireDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/dao/ReponseDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/dao/StagiaireDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/dao/SujetDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/db/Database.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/questionnaire/Sujet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-SR03/struts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/utilisateurs/Administrateur.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/questionnaire/Question.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-SR03/questionnaire/Question.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/questionnaire/Questionnaire.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-SR03/questionnaire/Questionnaire.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/questionnaire/Reponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-SR03/questionnaire/Reponse.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/utilisateurs/Compte.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-SR03/utilisateurs/Compte.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/utilisateurs/Stagiaire.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/AdministrateurDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/AdministrateurDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/CompteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/CompteDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/QuestionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/QuestionDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/QuestionnaireDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/QuestionnaireDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/ReponseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ReponseDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/StagiaireDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/StagiaireDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/SujetDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/SujetDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/questionnaire/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/questionnaire/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/questionnaire/Questionnaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/questionnaire/Questionnaire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/questionnaire/Reponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/questionnaire/Reponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/questionnaire/Sujet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/questionnaire/Sujet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilisateurs/Administrateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilisateurs/Administrateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilisateurs/Compte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilisateurs/Compte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilisateurs/Utilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilisateurs/Utilisateur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/utilisateurs/Utilisateur.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-SR03/utilisateurs/Utilisateur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/SignInAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/SignInAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/Database.java" afterDir="false" />
+    </list>
+    <list id="fc33b2ea-eb15-400e-ba92-ac261e682089" name="modif des requetes" comment="modif des requetes">
+      <changelist_data name="zakiaima" email="aiman.zaki@etu.utc.fr" date="1558995880000" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/action/SignInAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/WEB-INF/classes/action/SignInAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-SR03/action/SignInAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-SR03/action/SignInAction.class" afterDir="false" />
     </list>
     <list id="1cd517e3-34ef-4ef0-9c60-5b3e5cd826b6" name="Revert &quot;login OK&quot;" comment="Revert &quot;login OK&quot;&#10;&#10;This reverts commit 94abacef" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -132,38 +74,49 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utilisateurs/Compte.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/struts.xml">
-          <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dao/CompteDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="659">
-              <caret line="77" selection-start-line="77" selection-end-line="77" />
+            <state relative-caret-position="570">
+              <caret line="72" column="9" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/db/Database.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Projet-SR03.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="835" column="30" selection-start-line="835" selection-start-column="30" selection-end-line="835" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/libraries/javassist.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -171,31 +124,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/action/SignInAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+            <state relative-caret-position="315">
+              <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#755#756#0" expanded="true" />
                 <element signature="e#791#792#0" expanded="true" />
+                <element signature="e#824#825#0" expanded="true" />
+                <element signature="e#853#854#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c9c89a3b-0555-455a-9e49-a68a21f1fc6f/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/fail.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -203,8 +140,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/action/createUserAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+            <state relative-caret-position="125">
+              <caret line="20" column="23" selection-start-line="20" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -212,8 +149,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dao/StagiaireDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-250">
-              <caret line="80" column="21" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
+            <state relative-caret-position="420">
+              <caret line="96" column="37" selection-start-line="96" selection-end-line="97" />
+              <folding>
+                <element signature="e#1453#1464#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/SujetDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -223,6 +172,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="5">
               <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+              <folding>
+                <element signature="e#1446#1462#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -293,7 +245,6 @@
         <option value="$PROJECT_DIR$/sr03_bd.sql" />
         <option value="$PROJECT_DIR$/web/stagiaire.jsp" />
         <option value="c9c89a3b-0555-455a-9e49-a68a21f1fc6f/schema/sr03/table/compte.sql" />
-        <option value="$PROJECT_DIR$/src/db/Database.java" />
         <option value="$PROJECT_DIR$/src/utilisateurs/Compte.java" />
         <option value="$PROJECT_DIR$/web/admin.jsp" />
         <option value="$PROJECT_DIR$/web/createdUser.jsp" />
@@ -304,8 +255,9 @@
         <option value="$PROJECT_DIR$/src/struts.xml" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c9c89a3b-0555-455a-9e49-a68a21f1fc6f/console.sql" />
         <option value="$PROJECT_DIR$/src/dao/CompteDAO.java" />
-        <option value="$PROJECT_DIR$/src/action/SignInAction.java" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/src/action/SignInAction.java" />
+        <option value="$PROJECT_DIR$/src/db/Database.java" />
       </list>
     </option>
   </component>
@@ -343,20 +295,13 @@
             <path>
               <item name="Projet-SR03" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projet-SR03" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Projet-SR03" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projet-SR03" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projet-SR03" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-SR03" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="Projet_SR03_war_exploded" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="javassist.jar" type="ab9368bb:PsiFileNode" />
             </path>
             <path>
               <item name="Projet-SR03" type="b2602c69:ProjectViewProjectNode" />
@@ -374,6 +319,24 @@
               <item name="Projet-SR03" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Projet-SR03" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Projet-SR03" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Projet-SR03" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Projet-SR03" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="parcours" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Projet-SR03" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Projet-SR03" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="questionnaire" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Projet-SR03" type="b2602c69:ProjectViewProjectNode" />
@@ -403,9 +366,9 @@
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558996392672" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559034606007" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$APPLICATION_CONFIG_DIR$/jdbc-drivers/MySQL Connector/J/5.1.47/mysql-connector-java-5.1.47.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -540,12 +503,12 @@
       <workItem from="1557849142814" duration="3511000" />
       <workItem from="1558341955472" duration="1277000" />
       <workItem from="1558447654455" duration="18123000" />
-      <workItem from="1558529822714" duration="5599000" />
+      <workItem from="1558529822714" duration="7421000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78530000" />
+    <option name="totallyTimeSpent" value="80352000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -559,7 +522,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1044" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5349345" visible="true" weight="0.17929563" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5349345" visible="true" weight="0.17929563" />
       <window_info id="Structure" order="1" sideWeight="0.4650655" side_tool="true" weight="0.17929563" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -569,7 +532,7 @@
       <window_info id="Web" order="7" sideWeight="0.4650655" side_tool="true" weight="0.17929563" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969433" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49893278" weight="0.4661572" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49893278" weight="0.3286026" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -581,7 +544,7 @@
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3286026" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32969433" />
       <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32969433" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="14" sideWeight="0.4994664" visible="true" weight="0.42030567" />
+      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.4994664" visible="true" weight="0.42030567" />
       <window_info anchor="bottom" id="Database Console" order="15" weight="0.32969433" />
       <window_info anchor="bottom" id="SQL Generator" order="16" show_stripe_button="false" weight="0.32969433" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -590,7 +553,7 @@
       <window_info anchor="right" id="Maven" order="3" weight="0.32977587" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.32977587" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.32977587" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
@@ -677,14 +640,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/questionnaire/Question.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/ConfigConnection.java" />
     <entry file="file://$PROJECT_DIR$/src/Controleurs/Controleur.java" />
     <entry file="uml://JavaScript-modules-diagram//home/oxygene/DEV/SR03/Projet-SR03/src/Controleurs;/home/oxygene/DEV/SR03/Projet-SR03/src/dao;/home/oxygene/DEV/SR03/Projet-SR03/src/DB;/home/oxygene/DEV/SR03/Projet-SR03/src/db;/home/oxygene/DEV/SR03/Projet-SR03/src/parcours;/home/oxygene/DEV/SR03/Projet-SR03/src/questionnaire;/home/oxygene/DEV/SR03/Projet-SR03/src/utilisateurs;">
       <provider selected="true" editor-type-id="UmlEditorProvider">
@@ -756,13 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/SujetDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/Struts/lib/struts2-core.jar!/org/apache/struts2/factory/StrutsActionProxy.class" />
     <entry file="file://$PROJECT_DIR$/src/utilisateurs/Administrateur.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -779,16 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="20" lean-forward="true" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -945,13 +883,6 @@
     <entry file="file://$PROJECT_DIR$/UML aiman ZAKI jeremy LEVET.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projet-SR03.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -962,39 +893,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/action/createUserAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/struts.xml">
       <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/StagiaireDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-250">
-          <caret line="80" column="21" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/AdministrateurDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/CompteDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
         </state>
       </provider>
     </entry>
@@ -1012,22 +915,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/action/SignInAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#755#756#0" expanded="true" />
-            <element signature="e#791#792#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/struts2-core.jar!/org/apache/struts2/dispatcher/filter/StrutsPrepareAndExecuteFilter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="85" column="40" selection-start-line="85" selection-start-column="40" selection-end-line="85" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/fail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1038,10 +936,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/Projet_SR03_war_exploded/fail.jsp">
+    <entry file="file://$PROJECT_DIR$/src/action/SignInAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="315">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#755#756#0" expanded="true" />
+            <element signature="e#791#792#0" expanded="true" />
+            <element signature="e#824#825#0" expanded="true" />
+            <element signature="e#853#854#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/action/createUserAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="20" column="23" selection-start-line="20" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/StagiaireDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="96" column="37" selection-start-line="96" selection-end-line="97" />
+          <folding>
+            <element signature="e#1453#1464#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/SujetDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/AdministrateurDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+          <folding>
+            <element signature="e#1446#1462#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/CompteDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="72" column="9" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projet-SR03.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="835" column="30" selection-start-line="835" selection-start-column="30" selection-end-line="835" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/javassist.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1056,7 +1033,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1111,7 +1087,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Struts 2-2.5.14.1</last-edited>
+          <last-edited>javassist</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
