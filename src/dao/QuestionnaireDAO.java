@@ -28,13 +28,7 @@ public class QuestionnaireDAO implements DAO<Questionnaire>{
 			String sqlText = "SELECT * FROM Questionnaire WHERE id = " + id;
 			ResultSet res = sql.executeQuery(sqlText);
 			if(res.next()) {
-				String sqlText2 = "SELECT * FROM Sujet WHERE id = " + res.getInt("sujet");
-				ResultSet res2 = sql.executeQuery(sqlText2);
-				Sujet sujet = null;
-				if(res2.next()) {
-					sujet = new Sujet(res.getInt("sujet"), res2.getString("sujet"));
-				}
-				questionnaire = new Questionnaire((int)id, res.getBoolean("statut"), sujet, res.getString("intitule"));
+				questionnaire = new Questionnaire((int)id, res.getBoolean("statut"), res.getInt("sujet"), res.getString("intitule"));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -50,14 +44,9 @@ public class QuestionnaireDAO implements DAO<Questionnaire>{
         try {
 			Statement st = db.createStatement();
 			ResultSet res = st.executeQuery("select * from Questionnaire" );
-			Sujet sujet = null;
 			
 			while(res.next()){ 
-				ResultSet resCpt = st.executeQuery("select * from sujet where id =" + res.getInt("sujet"));
-				if(resCpt.next()) {
-					sujet = new Sujet(res.getInt("sujet"), resCpt.getString("sujet"));
-				}
-			    l.add(new Questionnaire(res.getInt("id"), res.getBoolean("statut"), sujet, res.getString("intitule")));
+			    l.add(new Questionnaire(res.getInt("id"), res.getBoolean("statut"), res.getInt("sujet"), res.getString("intitule")));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -77,7 +66,7 @@ public class QuestionnaireDAO implements DAO<Questionnaire>{
 
 			            PreparedStatement preparedStmt = db.prepareStatement(query);
 			            preparedStmt.setBoolean(1, t.getStatut());
-			            preparedStmt.setInt(2, t.getSujet().getId());
+			            preparedStmt.setInt(2, t.getIdSujet());
 			            preparedStmt.setString(3, t.getIntitule());
 
 			            preparedStmt.execute();
@@ -97,7 +86,7 @@ public class QuestionnaireDAO implements DAO<Questionnaire>{
 
 			            PreparedStatement preparedStmt = db.prepareStatement(query);
 			            preparedStmt.setBoolean (1, t.getStatut());
-			            preparedStmt.setInt (2, t.getSujet().getId());
+			            preparedStmt.setInt (2, t.getIdSujet());
 			            preparedStmt.setString (3, t.getIntitule());
 			            preparedStmt.execute();
 		}

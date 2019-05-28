@@ -29,13 +29,7 @@ public class ReponseDAO implements DAO<Reponse>{
 			String sqlText = "SELECT * FROM Reponse WHERE id = " + id;
 			ResultSet res = sql.executeQuery(sqlText);
 			if(res.next()) {
-				String sqlText2 = "SELECT * FROM Question WHERE id = " + res.getInt("question");
-				ResultSet res2 = sql.executeQuery(sqlText2);
-				Question question = null;
-				if(res2.next()) {
-					question = new Question(res.getInt("question"), res2.getString("intitule"), res.getBoolean("statut"));
-				}
-				reponse = new Reponse((int)id, res.getString("intitule"), res.getBoolean("statut"), res.getBoolean("bonne"), question);
+				reponse = new Reponse((int)id, res.getString("intitule"), res.getBoolean("statut"), res.getBoolean("bonne"), res.getInt("question"));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -51,14 +45,9 @@ public class ReponseDAO implements DAO<Reponse>{
         try {
 			Statement st = db.createStatement();
 			ResultSet res = st.executeQuery("select * from Reponse" );
-			Question question = null;
 			
 			while(res.next()){ 
-				ResultSet resCpt = st.executeQuery("select * from Question where id =" + res.getInt("question"));
-				if(resCpt.next()) {
-					question = new Question(res.getInt("question"), resCpt.getString("intitule"), res.getBoolean("statut"));
-				}
-			    l.add(new Reponse(res.getInt("id"), res.getString("intitule"), res.getBoolean("statut"), res.getBoolean("bonne"), question));
+			    l.add(new Reponse(res.getInt("id"), res.getString("intitule"), res.getBoolean("statut"), res.getBoolean("bonne"), res.getInt("question")));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -78,7 +67,7 @@ public class ReponseDAO implements DAO<Reponse>{
 			            preparedStmt.setString(1, t.getIntitule());
 			            preparedStmt.setBoolean(2, t.getStatut());
 			            preparedStmt.setBoolean(3, t.getBonne());
-			            preparedStmt.setInt(4, t.getQuestion().getId());
+			            preparedStmt.setInt(4, t.getIdQuestion());
 
 			            preparedStmt.execute();
 		}
