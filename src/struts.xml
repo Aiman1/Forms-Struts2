@@ -20,5 +20,10 @@
         <result name="succes">lister-user.jsp</result>
         <result name="failure">fail.jsp</result>
     </action>
+
+    <action name="CreerQuestion" class="action.CreerQuestionnaire">
+        <result name="succes">admin.jsp</result>
+        <result name="failure">fail.jsp</result>
+    </action>
 </package>
 </struts>
