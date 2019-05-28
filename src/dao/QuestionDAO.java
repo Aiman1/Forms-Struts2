@@ -29,7 +29,7 @@ public class QuestionDAO implements DAO<Question>{
 			String sqlText = "SELECT * FROM Question WHERE id = " + id;
 			ResultSet res = sql.executeQuery(sqlText);
 			if(res.next()) {
-				question = new Question((int)id, res.getString("intitule"), res.getBoolean("statut"));
+				question = new Question((int)id, res.getString("intitule"), res.getBoolean("statut"), res.getInt("questionnaire"));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -45,11 +45,10 @@ public class QuestionDAO implements DAO<Question>{
         try {
 			Statement st = db.createStatement();
 			ResultSet res = st.executeQuery("select * from Question" );
-			Sujet sujet = null;
 			
 			while(res.next()){ 
 				
-			    l.add(new Question(res.getInt("id"), res.getString("intitule"), res.getBoolean("statut")));
+			    l.add(new Question(res.getInt("id"), res.getString("intitule"), res.getBoolean("statut"), res.getInt("questionnaire")));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -64,12 +63,13 @@ public class QuestionDAO implements DAO<Question>{
 	public int create(Question t) {
 		try{
 			Statement sql = db.createStatement();
-			String query = " insert into Question (intitule, statut)"
-			        + " values (?, ?)";
+			String query = " insert into Question (intitule, statut, questionnaire)"
+			        + " values (?, ?, )";
 
 			            PreparedStatement preparedStmt = db.prepareStatement(query);
 			            preparedStmt.setString(1, t.getIntitule());
 			            preparedStmt.setBoolean(2, t.getStatut());
+			            preparedStmt.setInt(3, t.getIdQuestionnaire());
 
 			            preparedStmt.execute();
 		}
@@ -84,11 +84,12 @@ public class QuestionDAO implements DAO<Question>{
 	@Override
 	public int update(Question t, String[] params) {
 		try{
-			String query = " update Question set (intitule = ?, sujet = ?)";
+			String query = " update Question set (intitule = ?, sujet = ?, questionnaire = ?)";
 
 			            PreparedStatement preparedStmt = db.prepareStatement(query);
 			            preparedStmt.setString (1, t.getIntitule());
 			            preparedStmt.setBoolean (2, t.getStatut());
+			            preparedStmt.setInt(3, t.getIdQuestionnaire());
 			            preparedStmt.execute();
 		}
 		catch (Exception e) {

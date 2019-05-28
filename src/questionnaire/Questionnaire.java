@@ -5,17 +5,17 @@ import java.util.ArrayList;
 public class Questionnaire {
     private int id;
     private Boolean statut;
-    private Sujet sujet;
+    private int idSujet;
     private String intitule;
     private ArrayList<Question> questions;
 
     
     
-    public Questionnaire(int id, Boolean statut, Sujet sujet, String intitule) {
+    public Questionnaire(int id, Boolean statut, int sujet, String intitule) {
 		super();
 		this.id = id;
 		this.statut = statut;
-		this.sujet = sujet;
+		this.idSujet = sujet;
 		this.intitule = intitule;
 	}
 
@@ -45,14 +45,14 @@ public class Questionnaire {
 
 
 
-	public Sujet getSujet() {
-		return sujet;
+	public int getIdSujet() {
+		return idSujet;
 	}
 
 
 
-	public void setSujet(Sujet sujet) {
-		this.sujet = sujet;
+	public void setSujet(int sujet) {
+		this.idSujet = sujet;
 	}
 
 
