@@ -38,9 +38,6 @@ public class CompteDAO implements DAO<Compte> {
     }
 
     public boolean isAdmin(Compte compte) {
-        System.out.println("-----------------------------");
-        System.out.println(compte.toString());
-        System.out.println("-----------------------------");
         Connection db = Database.getConnection();
         try {
             String sqlText = "SELECT * FROM administrateur INNER JOIN compte ON administrateur.compte = compte.id WHERE email = ? AND mdp = ? ;";
@@ -87,11 +84,14 @@ public class CompteDAO implements DAO<Compte> {
             PreparedStatement sql = db.prepareStatement(query);
             sql.setString(1,compte.getEmail());
             sql.setString(2,compte.getMdp());
-            return String.valueOf(sql.executeQuery());
+            ResultSet res = sql.executeQuery();
+            if (res.next())
+                return res.getString(1) + ", " + res.getString(2);
+            return "?";
         }
         catch (SQLException e){
             e.printStackTrace();
-            return "probleme survenu";
+            return "exception survenu";
         }
     }
     

@@ -19,6 +19,10 @@ public class SignInAction extends ActionSupport implements SessionAware {
     }
 
     public String execute(){
+        System.out.println("-----------------------------");
+        System.out.println(compte.toString());
+        System.out.println("-----------------------------");
+
         CompteDAO dao = new CompteDAO();
         if (dao.isAdmin(compte)) {
             session.put("admin", true);

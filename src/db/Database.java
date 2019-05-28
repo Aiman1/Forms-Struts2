@@ -19,6 +19,7 @@ public class Database {
         try{
             Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection("jdbc:mysql://"+ DB_HOST,DB_NAME, DB_PASSWD);
+            System.out.println("-----------------------------\n Base de données chargées \n -------------------------------");
 
         }catch (ClassNotFoundException ex){
             Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
@@ -27,7 +28,6 @@ public class Database {
         }
     }
     public static Connection getConnection(){
-        System.out.println("-----------------------------\n Base de données chargées \n -------------------------------");
         return connection;
     }
 }

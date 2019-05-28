@@ -15,5 +15,10 @@
         <result name="succes">createdUser.jsp</result>
         <result name="failure">fail.jsp</result>
     </action>
+
+    <action name="listAllUsers" class="action.listAllUsersAction">
+        <result name="succes">lister-user.jsp</result>
+        <result name="failure">fail.jsp</result>
+    </action>
 </package>
 </struts>

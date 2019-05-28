@@ -1,3 +1,4 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: oxygene
@@ -8,15 +9,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Page admin</title>
 </head>
 <body>
-<%
-    String user =  (String) session.get("admin");
-%>
-<s:property value="#session.user" />
+
+
+<h1>Bonjour ${user}</h1>
 <a href="formulaire-user.jsp">creer utilisateur</a>
-<a href="">lister utilisateur</a>
+<a href="lister-user.jsp">lister utilisateur</a>
+<s:form action="listAllUsers">
+
+</s:form>
+
 
 </body>
 </html>

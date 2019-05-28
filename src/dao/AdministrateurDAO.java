@@ -45,19 +45,20 @@ public class AdministrateurDAO implements DAO<Administrateur>{
 	public List<Administrateur> getAll() throws SQLException {
 		List<Administrateur> l = new ArrayList<Administrateur>();
         Statement st = db.createStatement();
-        ResultSet res = st.executeQuery("select * from Administrateur" );
+        ResultSet res = st.executeQuery("select * , \"administrateur\" from Administrateur union select * , \"stagiaire\" from Administrateur" );
+
     	Compte compte = null;
-        
-        while(res.next()){ 
+        while(res.next()){
         	ResultSet resCpt = st.executeQuery("select * from compte where id =" + res.getInt("compte"));
     		if(resCpt.next()) {
     			compte = new Compte(res.getInt("compte"), resCpt.getString("email"), resCpt.getString("mdp"));
     		}
             l.add(new Administrateur(res.getInt("id"), res.getString("family_name"), res.getString("first_name"), res.getString("tel"), res.getString("societe"), res.getString("gender"), res.getBoolean("actif"), compte));
-        } 
+        }
 
     
         return l;
+
 	}
 
 	@Override

@@ -8,9 +8,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Page stagiaire</title>
 </head>
 <body>
-    <h1>TROUVER DANS LA DB !!!!!</h1>
+
+
+<h1>Bonjour ${user}</h1>
+
 </body>
 </html>
