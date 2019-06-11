@@ -3,6 +3,7 @@ package action;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.interceptor.SessionAware;
 import questionnaire.Question;
+import questionnaire.Questionnaire;
 import questionnaire.Reponse;
 
 import java.util.ArrayList;
@@ -10,9 +11,8 @@ import java.util.List;
 import java.util.Map;
 
 public class CreerQuestionnaire extends ActionSupport implements SessionAware {
-    private List <Reponse> reponses;
     private List<Question> questions;
-    private int [] nbReponses ;
+
 
     private String sujet;
     private String intitule;
@@ -36,9 +36,15 @@ public class CreerQuestionnaire extends ActionSupport implements SessionAware {
             System.out.println("\n\n");
         }
 
-*/
         for(Question q : questions)
             System.out.println(q.toString());
+        return "failure";
+*/
+        Questionnaire q = new Questionnaire();
+        q.setQuestions(questions);
+        q.setIntitule(intitule);
+        q.setSujet(1);
+        System.out.println(q.toString());
         return "failure";
     }
 
@@ -50,13 +56,7 @@ public class CreerQuestionnaire extends ActionSupport implements SessionAware {
         this.questions = questions;
     }
 
-    public List<Reponse> getReponses() {
-        return reponses;
-    }
 
-    public void setReponses(List<Reponse> reponses) {
-        this.reponses = reponses;
-    }
 
     @Override
     public void setSession(Map<String, Object> map) {

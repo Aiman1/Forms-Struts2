@@ -3,10 +3,7 @@ package dao;
 import db.Database;
 import utilisateurs.Compte;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,9 +19,27 @@ public class CompteDAO implements DAO<Compte> {
         return null;
     }
 
+
+
     @Override
     public int create(Compte compte) {
-        return 0;
+        Connection db = Database.getConnection();
+        try{
+            String query = " insert into compte (email, mdp)"
+                    + " values (?, ?)";
+
+            PreparedStatement preparedStmt = db.prepareStatement(query);
+            preparedStmt.setString(1, compte.getEmail());
+            preparedStmt.setString(2, compte.getMdp());
+
+            preparedStmt.execute();
+        }
+        catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            return 0;
+        }
+        return 1;
     }
 
     @Override

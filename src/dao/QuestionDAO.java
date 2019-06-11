@@ -17,7 +17,7 @@ import questionnaire.Sujet;
 
 public class QuestionDAO implements DAO<Question>{
 	private static Connection db;
-	
+
 	public QuestionDAO() throws SQLException {
 		db = Database.getConnection();
 	}
@@ -60,15 +60,23 @@ public class QuestionDAO implements DAO<Question>{
         return l;
 	}
 
+
+	private int lastID() throws SQLException {
+		Statement sql = db.createStatement();
+		String sqltxt = "SELECT MAX(id) FROM questionnaire;";
+		ResultSet res = sql.executeQuery(sqltxt);
+		if(res.next())
+			return res.getInt("id");
+		else return -1;
+	}
+
 	@Override
 	public int create(Question t) {
 		try{
-			DAO reponseDAO = new ReponseDAO();
-			for (Reponse r :t.getReponses()) {
-				reponseDAO.create(r);
-			}
+			t.setId(lastID());
+			t.setStatut(true);
 			Statement sql = db.createStatement();
-			String query = " insert into Question (intitule, statut, questionnaire)"
+			String query = " insert into question (intitule, statut, questionnaire)"
 			        + " values (?, ?, )";
 
 			            PreparedStatement preparedStmt = db.prepareStatement(query);
@@ -77,6 +85,10 @@ public class QuestionDAO implements DAO<Question>{
 			            preparedStmt.setInt(3, t.getIdQuestionnaire());
 
 			            preparedStmt.execute();
+			DAO reponseDAO = new ReponseDAO();
+			for (Reponse r :t.getReponses()) {
+				reponseDAO.create(r);
+			}
 		}
 		catch (SQLException e) {
 		// TODO Auto-generated catch block
@@ -89,7 +101,7 @@ public class QuestionDAO implements DAO<Question>{
 	@Override
 	public int update(Question t, String[] params) {
 		try{
-			String query = " update Question set (intitule = ?, sujet = ?, questionnaire = ?)";
+			String query = " update question set (intitule = ?, sujet = ?, questionnaire = ?)";
 
 			            PreparedStatement preparedStmt = db.prepareStatement(query);
 			            preparedStmt.setString (1, t.getIntitule());
@@ -108,7 +120,7 @@ public class QuestionDAO implements DAO<Question>{
 	public int delete(Question t) {
 		try {
 			Statement sql = db.createStatement();
-			String sqlText = "DELETE FROM Question WHERE id = " + t.getId();
+			String sqlText = "DELETE FROM question WHERE id = " + t.getId();
 			ResultSet res = sql.executeQuery(sqlText);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

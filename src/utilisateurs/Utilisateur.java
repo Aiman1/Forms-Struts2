@@ -120,8 +120,7 @@ public abstract class Utilisateur {
 
 
 	@Override
-    public String toString(){
-        return "";
-        //return "User first name = " + first_name + "\nUser family name = " + family_name + "\nUser email = " + user_email + "User gender = " + gender + "User pwd = " + user_password;
-    }
+    public String toString() {
+		return "User first name = " + first_name + "\nUser family name = " + family_name + "\nUser gender = " + gender + "\n\nUser compte = " + getCompte();
+	}
 }

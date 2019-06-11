@@ -46,6 +46,14 @@ public class Compte {
 		this.mdp = mdp;
 	}
 
+	public void setCreePar(Utilisateur creePar) {
+		this.creePar = creePar;
+	}
+
+	public Utilisateur getCreePar() {
+		return creePar;
+	}
+
 	public String toString(){
     	return "email:" + email + " mdp:" + mdp ;
 	}

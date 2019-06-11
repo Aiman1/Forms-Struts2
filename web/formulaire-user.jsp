@@ -14,25 +14,32 @@
 <body>
 
 <s:form action="createUserAction">
+    <label> email </label>
+    <input type="email" id="female" name="stagiaire.compte.email" value="email" />
+    <br>
+    <label> password </label>
+    <input type="password" id="female" name="stagiaire.compte.mdp" value="password" />
+    <br>
     <label> last name </label>
-    <input type="text" id="frname" name="Stagiaire.family_name" />
+    <input type="text" id="frname" name="stagiaire.family_name" />
     <br>
     <label> first name </label>
-    <input type="text" id="faname" name="Stagiaire.first_name" />
+    <input type="text" id="faname" name="stagiaire.first_name" />
     <br>
     <label> tel </label>
-    <input type="email" id="email" name="Stagiaire.tel" />
+    <input type="text" id="text" name="stagiaire.tel" />
     <br>
     <label> Société </label>
-    <input type="password" id="psw" name="Stagiaire.societe" />
+    <input type="text" id="psw" name="stagiaire.societe" />
     <br>
     <label> male </label>
-    <input type="radio" id="male" name="Stagiaire.gender" value="male" checked/>
+    <input type="radio" id="male" name="stagiaire.gender" value="male" checked/>
     <br>
     <label> female </label>
-    <input type="radio" id="female" name="Stagiaire.gender" value="female" />
+    <input type="radio" id="female" name="stagiaire.gender" value="female" />
     <br>
     <s:submit value="envoyer"/>
 </s:form>
 </body>
 </html>
+

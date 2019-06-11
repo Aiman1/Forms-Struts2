@@ -9,7 +9,10 @@ public class Questionnaire {
     private String intitule;
     private List<Question> questions;
 
-    
+
+    public Questionnaire(){
+
+	}
     
     public Questionnaire(int id, Boolean statut, int sujet, String intitule) {
 		super();
@@ -77,5 +80,13 @@ public class Questionnaire {
 	}
 	public void setIdSujet(int idSujet) {
 		this.idSujet = idSujet;
+	}
+
+	public String toString(){
+    	String s = "sujet: " + idSujet + "intitule: " + intitule + "\n";
+    	for (Question q : questions){
+    		s += "\t" + q.toString()+ "\n";
+		}
+    	return  s;
 	}
 }

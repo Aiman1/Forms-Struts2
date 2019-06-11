@@ -57,10 +57,22 @@ public class ReponseDAO implements DAO<Reponse>{
         return l;
 	}
 
+
+	private int lastID() throws SQLException {
+		Statement sql = db.createStatement();
+		String sqltxt = "SELECT MAX(id) FROM question;";
+		ResultSet res = sql.executeQuery(sqltxt);
+		if(res.next())
+			return res.getInt("id");
+		else return -1;
+	}
+
 	@Override
 	public int create(Reponse t) {
 		try{
-			String query = " insert into Reponse (intitule, statut, bonne, question)"
+			t.setId(lastID() + 1);
+			t.setStatut(true);
+			String query = " insert into reponse (intitule, statut, bonne, question)"
 			        + " values (?, ?, ?, ?)";
 
 			            PreparedStatement preparedStmt = db.prepareStatement(query);
@@ -82,7 +94,7 @@ public class ReponseDAO implements DAO<Reponse>{
 	@Override
 	public int update(Reponse t, String[] params) {
 		try{
-			String query = " update Reponse set (intitule = ?, sujet = ?, bonne = ?)";
+			String query = " update reponse set (intitule = ?, sujet = ?, bonne = ?)";
 
 			            PreparedStatement preparedStmt = db.prepareStatement(query);
 			            preparedStmt.setString (1, t.getIntitule());
@@ -101,7 +113,7 @@ public class ReponseDAO implements DAO<Reponse>{
 	public int delete(Reponse t) {
 		try {
 			Statement sql = db.createStatement();
-			String sqlText = "DELETE FROM Reponse WHERE id = " + t.getId();
+			String sqlText = "DELETE FROM reponse WHERE id = " + t.getId();
 			ResultSet res = sql.executeQuery(sqlText);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
