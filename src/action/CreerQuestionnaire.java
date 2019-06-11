@@ -1,11 +1,13 @@
 package action;
 
 import com.opensymphony.xwork2.ActionSupport;
+import dao.QuestionnaireDAO;
 import org.apache.struts2.interceptor.SessionAware;
 import questionnaire.Question;
 import questionnaire.Questionnaire;
 import questionnaire.Reponse;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +21,7 @@ public class CreerQuestionnaire extends ActionSupport implements SessionAware {
 
     private Map<String, Object> session;
 
-    public String execute(){
+    public String execute() throws SQLException {
  /*       System.out.println("\n\n");
         System.out.println("Questionnaire " + intitule + " sur le sujet: " + sujet);
         for (int i = 0; i < questions.size(); i++) {
@@ -45,6 +47,8 @@ public class CreerQuestionnaire extends ActionSupport implements SessionAware {
         q.setIntitule(intitule);
         q.setSujet(1);
         System.out.println(q.toString());
+        if(new QuestionnaireDAO().create(q) == 1)
+            return "succes";
         return "failure";
     }
 

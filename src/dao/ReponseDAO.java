@@ -60,7 +60,7 @@ public class ReponseDAO implements DAO<Reponse>{
 
 	private int lastID() throws SQLException {
 		Statement sql = db.createStatement();
-		String sqltxt = "SELECT MAX(id) FROM question;";
+		String sqltxt = "SELECT MAX(id) as \"id\" FROM question;";
 		ResultSet res = sql.executeQuery(sqltxt);
 		if(res.next())
 			return res.getInt("id");
@@ -70,8 +70,9 @@ public class ReponseDAO implements DAO<Reponse>{
 	@Override
 	public int create(Reponse t) {
 		try{
-			t.setId(lastID() + 1);
+			t.setIdQuestion(lastID());
 			t.setStatut(true);
+			t.setBonne(true);
 			String query = " insert into reponse (intitule, statut, bonne, question)"
 			        + " values (?, ?, ?, ?)";
 

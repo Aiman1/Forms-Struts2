@@ -74,7 +74,7 @@
             parent.setAttribute("rep",(parseInt(rep) + 1));
 
             var node = document.createElement("INPUT");
-            node.id = num + "," + rep;
+
             node.name = "questions["+question+"].reponses["+rep+"].intitule";
             node.type = "text";
             node.value = "reponse"+rep;
@@ -85,10 +85,10 @@
         function delReponses(ev, parent){
             ev.preventDefault();
             rep = parseInt(parent.getAttribute("rep"));
-            console.log(parent.childNodes);
+
             if (rep < 1) return;
 
-            parent.removeChild(parent.childNodes[rep + 3]);
+            parent.removeChild(parent.lastElementChild);
             parent.setAttribute("rep",(parseInt(rep) - 1));
 
         }

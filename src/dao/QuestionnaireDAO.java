@@ -70,6 +70,7 @@ public class QuestionnaireDAO implements DAO<Questionnaire>{
 	@Override
 	public int create(Questionnaire t) {
 		try{
+			t.setStatut(true);
 			Statement sql = db.createStatement();
 			String query = " insert into questionnaire (statut, sujet, intitule)"
 			        + " values (?, ?, ?)";
