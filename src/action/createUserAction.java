@@ -18,13 +18,16 @@ public class createUserAction extends ActionSupport implements SessionAware {
     }
 
     public String execute(){
-        System.out.println("user" + stagiaire);
-        if (session.get("admin").equals(true)){
-            //TODO
+        //if(!session.get("admin"))return "";
+        System.out.println("user" + stagiaire.toString());
+        if (stagiaire == null) return "failure";
+        if (!session.get("admin").equals(true)){
             return "failure";
         }
         else {
             try {
+                stagiaire.setActif(true);
+                //stagiaire.getCompte().setCreePar(session.get("user"));
                 if (new StagiaireDAO().create(stagiaire) == 1)
                     return "success";
                 else
@@ -34,6 +37,14 @@ public class createUserAction extends ActionSupport implements SessionAware {
                 return "failure";
             }
         }
+    }
+
+    public Stagiaire getStagiaire() {
+        return stagiaire;
+    }
+
+    public void setStagiaire(Stagiaire stagiaire) {
+        this.stagiaire = stagiaire;
     }
 
     @Override

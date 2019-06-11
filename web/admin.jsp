@@ -16,6 +16,7 @@
 
 <h1>Bonjour ${user}</h1>
 <a href="formulaire-user.jsp">creer utilisateur</a>
+<a href="formulaire-admin.jsp">creer Administrater</a>
 <a href="lister-user.jsp">lister utilisateur</a>
 <a href="formulaire-questionaire.jsp">creer questionnaire</a>
 

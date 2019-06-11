@@ -26,11 +26,11 @@ public class StagiaireDAO implements DAO<Stagiaire>{
 	@Override
 	public Optional<Stagiaire> get(long id) throws SQLException {
 		Statement sql = db.createStatement();
-		String sqlText = "SELECT * FROM Stagiaire WHERE id = " + id;
+		String sqlText = "SELECT * FROM stagiaire WHERE id = " + id;
 		ResultSet res = sql.executeQuery(sqlText);
 		Stagiaire stagiaire = null;
 		if(res.next()) {
-			String sqlText2 = "SELECT * FROM Compte WHERE id = " + res.getString("compte");
+			String sqlText2 = "SELECT * FROM compte WHERE id = " + res.getString("compte");
 			ResultSet res2 = sql.executeQuery(sqlText2);
 			Compte compte = null;
 			if(res2.next()) {
@@ -46,7 +46,7 @@ public class StagiaireDAO implements DAO<Stagiaire>{
 	public List<Stagiaire> getAll() throws SQLException{
 		List<Stagiaire> l = new ArrayList<Stagiaire>();
             Statement st = db.createStatement();
-            ResultSet res = st.executeQuery("select * from Stagiaire" );
+            ResultSet res = st.executeQuery("select * from stagiaire" );
         	Compte compte = null;
             
             while(res.next()){ 
@@ -61,12 +61,25 @@ public class StagiaireDAO implements DAO<Stagiaire>{
         return l;
 	}
 
+
+	private int lastID() throws SQLException {
+		Statement sql = db.createStatement();
+		String sqltxt = "SELECT MAX(id) FROM compte";
+		ResultSet res = sql.executeQuery(sqltxt);
+		if(res.next())
+			return res.getInt(1);
+		else return -1;
+	}
+
 	@Override
 	public int create(Stagiaire t){
 		try{
+			new CompteDAO().create(t.getCompte());
+			t.setId(lastID());
+			t.setActif(true);
 			Statement sql = db.createStatement();
-			String query = " insert into Stagiaire (family_name, first_name, tel, societe, gender, actif, compte)"
-			        + " values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			String query = " insert into stagiaire (family_name, first_name, tel, societe, gender, actif, compte)"
+			        + " values (?, ?, ?, ?, ?, ?, ?)";
 
 			            PreparedStatement preparedStmt = db.prepareStatement(query);
 			            preparedStmt.setString (1, t.getFamily_name());
@@ -75,7 +88,7 @@ public class StagiaireDAO implements DAO<Stagiaire>{
 			            preparedStmt.setString (4, t.getSociete());
 			            preparedStmt.setString (5, t.getGender());
 			            preparedStmt.setBoolean (6, t.isActif());
-			            preparedStmt.setInt(7, t.getCompte().getId());
+			            preparedStmt.setInt(7, t.getId());
 
 			preparedStmt.execute();
 			return 1;
@@ -90,7 +103,7 @@ public class StagiaireDAO implements DAO<Stagiaire>{
 	@Override
 	public int update(Stagiaire t, String[] params) {
 		try{
-			String query = " update Stagiaire set (family_name = ?, first_name = ?, tel = ?, societe = ?, gender = ?, actif = ?) where id=?";
+			String query = " update stagiaire set (family_name = ?, first_name = ?, tel = ?, societe = ?, gender = ?, actif = ?) where id=?";
 
 			            PreparedStatement preparedStmt = db.prepareStatement(query);
 			            preparedStmt.setString (1, t.getFamily_name());
@@ -114,7 +127,7 @@ public class StagiaireDAO implements DAO<Stagiaire>{
 	public int delete(Stagiaire t) {
 		try {
 			Statement sql = db.createStatement();
-			String sqlText = "DELETE FROM Stagiaire WHERE id = " + t.getId();
+			String sqlText = "DELETE FROM stagiaire WHERE id = " + t.getId();
 			ResultSet res = sql.executeQuery(sqlText);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

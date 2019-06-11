@@ -58,9 +58,9 @@ public class Question {
 	}
 
 	public String toString() {
-		String res = "id : " + id + ", intitule : " + intitule;
+		String res =  "intitule : " + intitule + " id : " + id +"\n";
 		for(Reponse r : reponses) {
-			res = res + " " + r.toString();
+			res += "\t" + " " + r.toString()+ "\n";
 		}
 		return res;
 	}

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        thead {
+        .fhead {
             background-color: #333;
             color: #fff;
         }
@@ -15,6 +15,9 @@
             background-color: #444;
             color: inherit;
             border: solid 1px
+        }
+        .finp{
+            display: block;
         }
     </style>
 </head>
@@ -31,62 +34,71 @@
         <option>C++</option>
         <!--
             ON devrait utiliser un truc commme ça ici !
-            new SujetDAO().getAl
+            new SujetDAO().getAll()
         -->
     </select>
 
+    <div class="finp" num="0" rep="2">
+    <span class="fhead"><input class="header-form" type="text" name="questions[0].intitule" num="0" value="intitule de la question 1"/></span>
+    <button onclick="return addReponses(event, this.parentNode)">Ajout Reponse</button>
+    <button onclick="return delReponses(event, this.parentNode)">Enlever Reponse</button> <br>
+    <input type="text" name="questions[0].reponses[0].intitule" value="reponse1"/>
+    <input type="text" name="questions[0].reponses[1].intitule" value="reponse2"/>
+    </div>
 
-    <table id="qstnr">
-        <thead>
-        <tr>
-            <th colspan="4"> <input class="header-form" type="text" name="questions[0].intitule" num="0" value="intitule de la question 1"/> </th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td><input type="text" name="questions[0].reponses[0].intitule" value="reponse1"/></td>
-            <td><input type="text" name="questions[0].reponses[1].intitule" value="reponse2"/></td>
-        </tr>
-        </tbody>
+    <br>
+    <br>
 
-        <thead>
-        <tr>
-            <th colspan="4"><input class="header-form" type="text" name="questions[1].intitule" num="1" value="intitule de la question 2"/></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td><input type="text" name="questions[1].reponses[0].intitule" value="reponse1"/></td>
-            <td><input type="text" name="questions[1].reponses[1].intitule" value="reponse2"/></td>
-        </tr>
-        </tbody>
-    </table>
+    <div class="finp" num="1" rep="2">
+    <span class="fhead"><input class="header-form" type="text" name="questions[1].intitule" num="1" value="intitule de la question 2"/></span>
+    <button onclick="return addReponses(event, this.parentNode)">Ajout Reponse</button>
+    <button onclick="return delReponses(event, this.parentNode)">Enlever Reponse</button> <br>
+    <input type="text" name="questions[1].reponses[0].intitule" value="reponse1"/>
+    <input type="text" name="questions[1].reponses[1].intitule" value="reponse2"/>
+    </div>
+
 
     <br>
     <input type="submit" value="Submit"> </form>
     <button onclick="addQuestions()">Ajout Question</button>
     <button onclick="delQuestion()">Delete Question</button>
     <script>
+
         var nbQuestion = 2;
+        function addReponses(ev, parent){
+            ev.preventDefault();
+
+            question = parent.getAttribute("num");
+            rep = parent.getAttribute("rep");
+
+            parent.setAttribute("rep",(parseInt(rep) + 1));
+
+            var node = document.createElement("INPUT");
+            node.id = num + "," + rep;
+            node.name = "questions["+question+"].reponses["+rep+"].intitule";
+            node.type = "text";
+            node.value = "reponse"+rep;
+
+            parent.appendChild(node);
+
+        }
+        function delReponses(ev, parent){
+            ev.preventDefault();
+            rep = parseInt(parent.getAttribute("rep"));
+            console.log(parent.childNodes);
+            if (rep < 1) return;
+
+            parent.removeChild(parent.childNodes[rep + 3]);
+            parent.setAttribute("rep",(parseInt(rep) - 1));
+
+        }
         function addQuestions() {
-            var table = document.getElementById("qstnr");
-            //var rows = table.getElementsByTagName("tbody")[0].getElementsByTagName("tr").length;
 
-            var quest = table.insertRow(nbQuestion);
-            var cell1 = quest.insertCell(0);
-            var cell2 = quest.insertCell(0);
-
-            cell1.innerHTML = "<button onclick=\"addReponse()\">Ajout Reponse</button> <button onclick=\"delReponse()\">suppr Reponse</button>";
-
-            cell2.innerHTML = "<input class=\"header-form\" type=\"text\" name=\"reponses[" + nbQuestion + "].intitule\" value=\"Question"+ (++nbQuestion) +"\"/>";
-
-            //nbQuestion++;
         }
 
         function delQuestion() {
             if (nbQuestion == 0) return;
-            document.getElementById("qstnr").deleteRow(nbQuestion - 1);
-            nbQuestion--;
+
         }
     </script>
 </body>

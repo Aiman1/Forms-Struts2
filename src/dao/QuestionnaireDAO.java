@@ -26,7 +26,7 @@ public class QuestionnaireDAO implements DAO<Questionnaire>{
 		Questionnaire questionnaire = null;
 		try {
 			Statement sql = db.createStatement();
-			String sqlText = "SELECT * FROM Questionnaire WHERE id = " + id;
+			String sqlText = "SELECT * FROM questionnaire WHERE id = " + id;
 			ResultSet res = sql.executeQuery(sqlText);
 			if(res.next()) {
 				questionnaire = new Questionnaire((int)id, res.getBoolean("statut"), res.getInt("sujet"), res.getString("intitule"));
@@ -44,7 +44,7 @@ public class QuestionnaireDAO implements DAO<Questionnaire>{
 		List<Questionnaire> l = new ArrayList<Questionnaire>();
         try {
 			Statement st = db.createStatement();
-			ResultSet res = st.executeQuery("select * from Questionnaire" );
+			ResultSet res = st.executeQuery("select * from questionnaire" );
 			
 			while(res.next()){ 
 			    l.add(new Questionnaire(res.getInt("id"), res.getBoolean("statut"), res.getInt("sujet"), res.getString("intitule")));
@@ -58,15 +58,20 @@ public class QuestionnaireDAO implements DAO<Questionnaire>{
         return l;
 	}
 
+	private int lastID() throws SQLException {
+		Statement sql = db.createStatement();
+		String sqltxt = "SELECT MAX(id) FROM questionnaire;";
+		ResultSet res = sql.executeQuery(sqltxt);
+		if(res.next())
+			return res.getInt("id");
+		else return -1;
+	}
+
 	@Override
 	public int create(Questionnaire t) {
 		try{
-			DAO questionDao = new QuestionDAO();
-			for (Question q : t.getQuestions()){
-				questionDao.create(q);
-			}
 			Statement sql = db.createStatement();
-			String query = " insert into Questionnaire (statut, sujet, intitule)"
+			String query = " insert into questionnaire (statut, sujet, intitule)"
 			        + " values (?, ?, ?)";
 
 			            PreparedStatement preparedStmt = db.prepareStatement(query);
@@ -75,6 +80,10 @@ public class QuestionnaireDAO implements DAO<Questionnaire>{
 			            preparedStmt.setString(3, t.getIntitule());
 
 			            preparedStmt.execute();
+			DAO questionDao = new QuestionDAO();
+			for (Question q : t.getQuestions()){
+				questionDao.create(q);
+			}
 		}
 		catch (SQLException e) {
 		// TODO Auto-generated catch block
