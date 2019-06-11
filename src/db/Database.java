@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 
 public class Database {
     private static String DB_HOST = "127.0.0.1:3306/sr03";
-    private static String DB_PASSWD = "";
+    private static String DB_PASSWD = "admin";
     private static String DB_NAME = "root";
     private static Connection connection;
     static{

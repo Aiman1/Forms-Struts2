@@ -7,9 +7,11 @@ public class Reponse {
     private Boolean bonne;
     private int idQuestion;
     
-    
+    public Reponse(){
+
+	}
+
 	public Reponse(int id, String intitule, Boolean statut, Boolean bonne, int question) {
-		super();
 		this.id = id;
 		this.intitule = intitule;
 		this.statut = statut;
@@ -51,7 +53,7 @@ public class Reponse {
 	}
 
 	public String toString() {
-    	System.out.println("id : " + id + ", intitule : " + intitule);
+    	return ("id : " + id + ", intitule : " + intitule);
     }
 
 }

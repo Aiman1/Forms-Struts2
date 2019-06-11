@@ -1,6 +1,6 @@
 package questionnaire;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Question {
     
@@ -8,10 +8,10 @@ public class Question {
     private int id;
     private String intitule;
     private int idQuestionnaire;
-    private ArrayList<Reponse> reponses;
+    private int nbQuestion;
+    private List<Reponse> reponses;
     private Boolean statut;
-    public ArrayList<Reponse> getReponses(){return this.reponses;}
-    
+
     public Question(int id, String intitule, Boolean statut, int idQuestionnaire) {
         this.id = id;
         this.intitule = intitule;
@@ -43,7 +43,7 @@ public class Question {
 	public void setStatut(Boolean statut) {
 		this.statut = statut;
 	}
-	
+
 	public int getIdQuestionnaire() {
 		return idQuestionnaire;
 	}
@@ -51,11 +51,16 @@ public class Question {
 	public void setIdQuestionnaire(int idQuestionnaire) {
 		this.idQuestionnaire = idQuestionnaire;
 	}
+    public List<Reponse> getReponses(){return this.reponses;}
+
+	public void setReponses(List<Reponse> reponses) {
+		this.reponses = reponses;
+	}
 
 	public String toString() {
 		String res = "id : " + id + ", intitule : " + intitule;
 		for(Reponse r : reponses) {
-			res = res + r;
+			res = res + " " + r.toString();
 		}
 		return res;
 	}

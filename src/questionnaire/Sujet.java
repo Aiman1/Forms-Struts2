@@ -27,4 +27,8 @@ public class Sujet {
 	public void setSujet(String sujet) {
 		this.sujet = sujet;
 	}
+
+	public void addQuestionnaire(Questionnaire q){
+		questionnaires.add(q);
+	}
 }

@@ -12,6 +12,7 @@ import java.util.Optional;
 import db.Database;
 import questionnaire.Question;
 import questionnaire.Questionnaire;
+import questionnaire.Reponse;
 import questionnaire.Sujet;
 
 public class QuestionDAO implements DAO<Question>{
@@ -62,6 +63,10 @@ public class QuestionDAO implements DAO<Question>{
 	@Override
 	public int create(Question t) {
 		try{
+			DAO reponseDAO = new ReponseDAO();
+			for (Reponse r :t.getReponses()) {
+				reponseDAO.create(r);
+			}
 			Statement sql = db.createStatement();
 			String query = " insert into Question (intitule, statut, questionnaire)"
 			        + " values (?, ?, )";

@@ -19,11 +19,11 @@ public class Administrateur extends Utilisateur {
 
     
     public void modifierOrdreReponse(Question q){
-        ArrayList<Reponse> reponses = q.getReponses();
+        //ArrayList<Reponse> reponses = q.getReponses();
     }
 
     public void modifierOrdreQuestion(Questionnaire q){
-        ArrayList<Question> questions = q.getQuestions();
+        //ArrayList<Question> questions = q.getQuestions();
     }
     @Override
     public Boolean isAdmin(){

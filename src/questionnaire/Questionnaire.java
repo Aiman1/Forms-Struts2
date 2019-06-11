@@ -1,13 +1,13 @@
 package questionnaire;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Questionnaire {
     private int id;
     private Boolean statut;
     private int idSujet;
     private String intitule;
-    private ArrayList<Question> questions;
+    private List<Question> questions;
 
     
     
@@ -69,5 +69,13 @@ public class Questionnaire {
 
 
 
-	public ArrayList<Question> getQuestions(){return this.questions;}
+	public List<Question> getQuestions(){return this.questions;}
+
+
+	public void setQuestions(List<Question> questions) {
+		this.questions = questions;
+	}
+	public void setIdSujet(int idSujet) {
+		this.idSujet = idSujet;
+	}
 }
