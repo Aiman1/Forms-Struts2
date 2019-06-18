@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 28 mai 2019 à 16:29
+-- Généré le :  mar. 18 juin 2019 à 16:08
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.14
 
@@ -41,6 +41,13 @@ CREATE TABLE IF NOT EXISTS `administrateur` (
   KEY `cleCompteAdmin` (`compte`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
+--
+-- Déchargement des données de la table `administrateur`
+--
+
+INSERT INTO `administrateur` (`id`, `family_name`, `first_name`, `tel`, `societe`, `gender`, `actif`, `compte`) VALUES
+(0, 'admin', 'admin', 'admin', 'admin', 'male', 1, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -53,6 +60,31 @@ CREATE TABLE IF NOT EXISTS `compte` (
   `email` varchar(30) COLLATE latin1_general_ci NOT NULL,
   `mdp` varchar(30) COLLATE latin1_general_ci NOT NULL,
   PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+
+--
+-- Déchargement des données de la table `compte`
+--
+
+INSERT INTO `compte` (`id`, `email`, `mdp`) VALUES
+(1, 'admin@admin', 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `parcours`
+--
+
+DROP TABLE IF EXISTS `parcours`;
+CREATE TABLE IF NOT EXISTS `parcours` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `duree` double NOT NULL,
+  `score` int(11) NOT NULL,
+  `utilisateur` int(11) NOT NULL,
+  `questionnaire` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `cleParcoursUtilisateur` (`utilisateur`),
+  KEY `cleParcoursQuestionnaire` (`questionnaire`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 -- --------------------------------------------------------
@@ -178,6 +210,13 @@ INSERT INTO `sujet` (`id`, `sujet`) VALUES
 --
 ALTER TABLE `administrateur`
   ADD CONSTRAINT `cleCompteAdmin` FOREIGN KEY (`compte`) REFERENCES `compte` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Contraintes pour la table `parcours`
+--
+ALTER TABLE `parcours`
+  ADD CONSTRAINT `cleParcoursQuestionnaire` FOREIGN KEY (`questionnaire`) REFERENCES `questionnaire` (`id`),
+  ADD CONSTRAINT `cleParcoursUtilisateur` FOREIGN KEY (`utilisateur`) REFERENCES `stagiaire` (`id`);
 
 --
 -- Contraintes pour la table `question`
