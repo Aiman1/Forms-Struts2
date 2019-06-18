@@ -2,6 +2,9 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
     <title>Création d'utillisateurs</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,12 +59,48 @@
     <input type="text" name="questions[1].reponses[0].intitule" value="reponse1"/>
     <input type="text" name="questions[1].reponses[1].intitule" value="reponse2"/>
     </div>
+    <br>
+
+    <div class="finp" num="2" rep="2" style="display: none;">
+        <span class="fhead"><input class="header-form" type="text" name="questions[2].intitule" num="2" value="nom Question"/></span>
+        <button onclick="return addReponses(event, this.parentNode)">Ajout Reponse</button>
+        <button onclick="return delReponses(event, this.parentNode)">Enlever Reponse</button> <br>
+        <input type="text" name="questions[2].reponses[0].intitule" value="reponse1"/>
+        <input type="text" name="questions[2].reponses[1].intitule" value="reponse2"/>
+    </div>
+    <br>
+
+    <div class="finp" num="3" rep="2" style="display: none;">
+        <span class="fhead"><input class="header-form" type="text" name="questions[3].intitule" num="3" value="nom Question"/></span>
+        <button onclick="return addReponses(event, this.parentNode)">Ajout Reponse</button>
+        <button onclick="return delReponses(event, this.parentNode)">Enlever Reponse</button> <br>
+        <input type="text" name="questions[3].reponses[0].intitule" value="reponse1"/>
+        <input type="text" name="questions[3].reponses[1].intitule" value="reponse2"/>
+    </div>
+    <br>
+
+    <div class="finp" num="4" rep="2" style="display: none;">
+        <span class="fhead"><input class="header-form" type="text" name="questions[4].intitule" num="4" value="nom Question"/></span>
+        <button onclick="return addReponses(event, this.parentNode)">Ajout Reponse</button>
+        <button onclick="return delReponses(event, this.parentNode)">Enlever Reponse</button> <br>
+        <input type="text" name="questions[4].reponses[0].intitule" value="reponse1"/>
+        <input type="text" name="questions[4].reponses[1].intitule" value="reponse2"/>
+    </div>
+    <br>
+
+    <div class="finp" num="5" rep="2" style="display: none;">
+        <span class="fhead"><input class="header-form" type="text" name="questions[5].intitule" num="5" value="nom Question"/></span>
+        <button onclick="return addReponses(event, this.parentNode)">Ajout Reponse</button>
+        <button onclick="return delReponses(event, this.parentNode)">Enlever Reponse</button> <br>
+        <input type="text" name="questions[5].reponses[0].intitule" value="reponse1"/>
+        <input type="text" name="questions[5].reponses[1].intitule" value="reponse2"/>
+    </div>
 
 
     <br>
     <input type="submit" value="Submit"> </form>
-    <button onclick="addQuestions()">Ajout Question</button>
-    <button onclick="delQuestion()">Delete Question</button>
+    <button onclick="addQuestions(event)">Ajout Question</button>
+    <button onclick="delQuestion(event)">Delete Question</button>
     <script>
 
         var nbQuestion = 2;
@@ -92,12 +131,21 @@
             parent.setAttribute("rep",(parseInt(rep) - 1));
 
         }
-        function addQuestions() {
+        function addQuestions(ev) {
+            ev.preventDefault();
 
+            var element = document.querySelector('[num="'+ nbQuestion +'"]');
+            element.style.display = "block";
+            nbQuestion++;
         }
 
-        function delQuestion() {
+        function delQuestion(ev) {
+            ev.preventDefault();
+
             if (nbQuestion == 0) return;
+            var element = document.querySelector('[num="'+ nbQuestion +'"]');
+            element.style.display = "none";
+            nbQuestion--;
 
         }
     </script>

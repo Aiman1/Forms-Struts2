@@ -60,10 +60,10 @@ public class QuestionnaireDAO implements DAO<Questionnaire>{
 
 	private int lastID() throws SQLException {
 		Statement sql = db.createStatement();
-		String sqltxt = "SELECT MAX(id) FROM questionnaire;";
+		String sqltxt = "SELECT LAST_INSERT_ID() FROM questionnaire;";
 		ResultSet res = sql.executeQuery(sqltxt);
 		if(res.next())
-			return res.getInt("id");
+			return res.getInt(1);
 		else return -1;
 	}
 
@@ -73,16 +73,25 @@ public class QuestionnaireDAO implements DAO<Questionnaire>{
 			t.setStatut(true);
 			Statement sql = db.createStatement();
 			String query = " insert into questionnaire (statut, sujet, intitule)"
-			        + " values (?, ?, ?)";
+			        + " values (?, ?, ?);";
 
-			            PreparedStatement preparedStmt = db.prepareStatement(query);
-			            preparedStmt.setBoolean(1, t.getStatut());
-			            preparedStmt.setInt(2, t.getIdSujet());
-			            preparedStmt.setString(3, t.getIntitule());
+			PreparedStatement preparedStmt = db.prepareStatement(query);
+			preparedStmt.setBoolean(1, t.getStatut());
+			preparedStmt.setInt(2, t.getIdSujet());
+			preparedStmt.setString(3, t.getIntitule());
 
-			            preparedStmt.execute();
+			preparedStmt.executeUpdate();
+			//ResultSet res = preparedStmt.getResultSet();
+			//if(res.next()) System.out.println(res.getInt(1));
+			ResultSet re = preparedStmt.executeQuery("SELECT LAST_INSERT_ID() FROM questionnaire;");
+			if (!re.next())
+				//System.out.println("id = "+ re.getInt(1) + "\nlastID = " + lastID());
+				return 0;
+			int id = re.getInt(1);
+			//System.out.println("id = "+ id + " et lastId() = "+ lastID());
 			DAO questionDao = new QuestionDAO();
 			for (Question q : t.getQuestions()){
+				q.setIdQuestionnaire(id);
 				questionDao.create(q);
 			}
 		}

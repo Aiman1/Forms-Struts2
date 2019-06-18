@@ -60,7 +60,7 @@ public class ReponseDAO implements DAO<Reponse>{
 
 	private int lastID() throws SQLException {
 		Statement sql = db.createStatement();
-		String sqltxt = "SELECT MAX(id) as \"id\" FROM question;";
+		String sqltxt = "SELECT SELECT LAST_INSERT_ID() as \"id\" FROM question;";
 		ResultSet res = sql.executeQuery(sqltxt);
 		if(res.next())
 			return res.getInt("id");
@@ -70,19 +70,21 @@ public class ReponseDAO implements DAO<Reponse>{
 	@Override
 	public int create(Reponse t) {
 		try{
-			t.setIdQuestion(lastID());
+			//t.setIdQuestion(lastID());
 			t.setStatut(true);
-			t.setBonne(true);
+			t.setBonne(true);// TODO
 			String query = " insert into reponse (intitule, statut, bonne, question)"
 			        + " values (?, ?, ?, ?)";
 
-			            PreparedStatement preparedStmt = db.prepareStatement(query);
-			            preparedStmt.setString(1, t.getIntitule());
-			            preparedStmt.setBoolean(2, t.getStatut());
-			            preparedStmt.setBoolean(3, t.getBonne());
-			            preparedStmt.setInt(4, t.getIdQuestion());
+			PreparedStatement preparedStmt = db.prepareStatement(query);
+			preparedStmt.setString(1, t.getIntitule());
+			preparedStmt.setBoolean(2, t.getStatut());
+			preparedStmt.setBoolean(3, t.getBonne());
+			preparedStmt.setInt(4, t.getIdQuestion());
 
-			            preparedStmt.execute();
+			preparedStmt.executeUpdate();
+
+			//ResultSet re =preparedStmt.executeQuery("")
 		}
 		catch (SQLException e) {
 		// TODO Auto-generated catch block

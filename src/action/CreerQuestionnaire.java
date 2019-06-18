@@ -9,6 +9,7 @@ import questionnaire.Reponse;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -43,12 +44,20 @@ public class CreerQuestionnaire extends ActionSupport implements SessionAware {
         return "failure";
 */
         Questionnaire q = new Questionnaire();
+        Iterator<Question> i = questions.iterator();
+        while (i.hasNext()) {
+            Question qe = i.next();
+            if (qe.getIntitule().compareTo("nom Question")==1)
+                i.remove();
+        }
         q.setQuestions(questions);
         q.setIntitule(intitule);
-        q.setSujet(1);
+        int suj = 1; //TODO
+        q.setSujet(suj);
+
         System.out.println(q.toString());
         if(new QuestionnaireDAO().create(q) == 1)
-            return "succes";
+            return "success";
         return "failure";
     }
 

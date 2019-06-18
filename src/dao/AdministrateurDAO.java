@@ -14,6 +14,8 @@ import java.util.List;
 import java.util.Optional;
 
 import dao.DAO;
+import utilisateurs.Stagiaire;
+import utilisateurs.Utilisateur;
 
 public class AdministrateurDAO implements DAO<Administrateur>{
 	private static Connection db;
@@ -45,11 +47,12 @@ public class AdministrateurDAO implements DAO<Administrateur>{
 	public List<Administrateur> getAll() throws SQLException {
 		List<Administrateur> l = new ArrayList<Administrateur>();
         Statement st = db.createStatement();
-        ResultSet res = st.executeQuery("select * , \"administrateur\" from Administrateur union select * , \"stagiaire\" from Administrateur" );
+        ResultSet res = st.executeQuery("select * , \"administrateur\" from administrateur union select * , \"stagiaire\" from stagiaire" );
 
     	Compte compte = null;
         while(res.next()){
-        	ResultSet resCpt = st.executeQuery("select * from compte where id =" + res.getInt("compte"));
+            st = db.createStatement();
+            ResultSet resCpt = st.executeQuery("select * from compte where id =" + res.getInt("compte"));
     		if(resCpt.next()) {
     			compte = new Compte(res.getInt("compte"), resCpt.getString("email"), resCpt.getString("mdp"));
     		}
@@ -62,7 +65,12 @@ public class AdministrateurDAO implements DAO<Administrateur>{
 	}
 
 	@Override
-	public int create(Administrateur t) throws SQLException{
+	public int create(Administrateur administrateur) throws SQLException {
+		return 0;
+	}
+
+
+	public int create(Stagiaire t) throws SQLException{
 		try{
 			Statement sql = db.createStatement();
 			String query = " insert into Administrateur (family_name, first_name, tel, societe, gender, actif, compte)"

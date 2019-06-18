@@ -63,7 +63,7 @@ public class QuestionDAO implements DAO<Question>{
 
 	private int lastID() throws SQLException {
 		Statement sql = db.createStatement();
-		String sqltxt = "SELECT MAX(id) as \"id\" FROM questionnaire;";
+		String sqltxt = "SELECT LAST_INSERT_ID() as \"id\" FROM questionnaire;";
 		ResultSet res = sql.executeQuery(sqltxt);
 		if(res.next())
 			return res.getInt("id");
@@ -73,20 +73,26 @@ public class QuestionDAO implements DAO<Question>{
 	@Override
 	public int create(Question t) {
 		try{
-			t.setIdQuestionnaire(lastID());
+			//t.setIdQuestionnaire(lastID());
 			t.setStatut(true);
 			Statement sql = db.createStatement();
 			String query = " insert into question (intitule, statut, questionnaire)"
 			        + " values (?, ?, ?)";
 
-			            PreparedStatement preparedStmt = db.prepareStatement(query);
-			            preparedStmt.setString(1, t.getIntitule());
-			            preparedStmt.setBoolean(2, t.getStatut());
-			            preparedStmt.setInt(3, t.getIdQuestionnaire());
+			PreparedStatement preparedStmt = db.prepareStatement(query);
+			preparedStmt.setString(1, t.getIntitule());
+			preparedStmt.setBoolean(2, t.getStatut());
+			preparedStmt.setInt(3, t.getIdQuestionnaire());
 
-			            preparedStmt.execute();
+			preparedStmt.executeUpdate();
+
+			ResultSet re = preparedStmt.executeQuery("SELECT LAST_INSERT_ID()");
+			if(!re.next()) return 0;
+
+			int Id = re.getInt(1);
 			DAO reponseDAO = new ReponseDAO();
 			for (Reponse r :t.getReponses()) {
+				r.setIdQuestion(Id);
 				reponseDAO.create(r);
 			}
 		}

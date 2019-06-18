@@ -9,6 +9,9 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
     <title>Création d'utillisateurs</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +19,7 @@
 
 <body>
 <div>TODO write content</div>
-<form action="Controleurs/CreerUnUtilisateur" method="post">
+<form action="createUserAction" method="post">
     <label> First name </label>
     <input type="text" id="frname" name="User first name" />
     <br>
@@ -35,7 +38,9 @@
     <label> female </label>
     <input type="radio" id="female" name="gender" value="female" />
     <br>
+    <input type="hidden" id="admin" name="admin" value="true">
     <input type="submit" value="Submit"> </form>
+    <br>
 </body>
 
 </html>

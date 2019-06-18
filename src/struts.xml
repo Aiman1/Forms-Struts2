@@ -17,12 +17,17 @@
     </action>
 
     <action name="listAllUsers" class="action.listAllUsersAction">
-        <result name="succes">lister-user.jsp</result>
+        <result name="success">lister-user.jsp</result>
         <result name="failure">fail.jsp</result>
     </action>
 
     <action name="CreerQuestion" class="action.CreerQuestionnaire">
-        <result name="succes">admin.jsp</result>
+        <result name="success">admin.jsp</result>
+        <result name="failure">fail.jsp</result>
+    </action>
+
+    <action name="listQuestionnaires" class="action.listAllQuestionnaire">
+        <result name="success">lister-qstnr.jsp</result>
         <result name="failure">fail.jsp</result>
     </action>
 </package>
