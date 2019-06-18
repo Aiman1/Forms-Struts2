@@ -18,15 +18,13 @@
 
 
 <h1>Bonjour ${user}</h1>
-<button>lister questionnaire</button>
-<button>creer questionnaire</button>
 
-<a href="formulaire-user.jsp"><button>creer utilisateur</button>
-</a><br>
-<a href="formulaire-admin.jsp"><button>creer Administrater</button></a><br>
-<a href="listAllUsers">lister utilisateur</a><br>
-<a href="listQuestionnaires">lister questionnaire</a><br>
-<a href="formulaire-questionaire.jsp">creer questionnaire</a>
+
+<button><a href="formulaire-user.jsp">Créer un stagiaire</a></button>
+<button><a href="formulaire-admin.jsp">Créer un administrateur</a></button>
+<button><a href="listAllUsers">Lister utilisateurs</a></button>
+<button><a href="listQuestionnaires">Lister questionnaires</a></button>
+<button><a href="formulaire-questionaire.jsp">Créer un questionnaire</button>
 
 
 </body>

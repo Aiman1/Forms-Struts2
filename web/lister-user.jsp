@@ -28,7 +28,7 @@
         societe: <s:property value="societe"/><br/>
         gender: <s:property value="gender"/><br/>
         actif: <s:property value="actif"/><br/>
-        <button onclick="modifier(event)">Modifier Questionnaire</button>
+        <button onclick="modifier(event)">Modifier utilisateur</button>
     </fieldset>
 </s:iterator>
 <script>

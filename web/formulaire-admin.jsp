@@ -20,10 +20,10 @@
 <body>
 <div>TODO write content</div>
 <form action="createUserAction" method="post">
-    <label> First name </label>
+    <label> Prénom </label>
     <input type="text" id="frname" name="User first name" />
     <br>
-    <label> Family name </label>
+    <label> Nom </label>
     <input type="text" id="faname" name="User family name" />
     <br>
     <label> Email </label>
@@ -32,10 +32,10 @@
     <label> Password </label>
     <input type="password" id="psw" name="User password" />
     <br>
-    <label> male </label>
+    <label> homme </label>
     <input type="radio" id="male" name="gender" value="male" checked/>
     <br>
-    <label> female </label>
+    <label> femme </label>
     <input type="radio" id="female" name="gender" value="female" />
     <br>
     <input type="hidden" id="admin" name="admin" value="true">

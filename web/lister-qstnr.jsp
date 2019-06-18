@@ -9,14 +9,14 @@
 <%@ taglib uri="/struts-tags" prefix="s" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Questionnaires</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
     <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
     <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
 </head>
 <body>
 
-<h3>Tout les questionnaires:</h3>
+<h3>Tous les questionnaires :</h3>
 
 <s:iterator  value="qs">
     <fieldset>
@@ -25,7 +25,6 @@
         idSujet: <s:property value="idSujet"/><br/>
         intitule: <s:property value="intitule"/><br/>
         <button onclick="modifier(event)">Modifier Questionnaire</button>
-        <button onclick="assigner(event)">Assigner Questionnaire</button>
     </fieldset>
 </s:iterator>
 

@@ -23,22 +23,22 @@
     <label> password </label>
     <input type="password" id="female" name="stagiaire.compte.mdp" value="password" />
     <br>
-    <label> last name </label>
+    <label> nom </label>
     <input type="text" id="frname" name="stagiaire.family_name" />
     <br>
-    <label> first name </label>
+    <label> prénom </label>
     <input type="text" id="faname" name="stagiaire.first_name" />
     <br>
     <label> tel </label>
     <input type="text" id="text" name="stagiaire.tel" />
     <br>
-    <label> Société </label>
+    <label> société </label>
     <input type="text" id="psw" name="stagiaire.societe" />
     <br>
-    <label> male </label>
+    <label> homme </label>
     <input type="radio" id="male" name="stagiaire.gender" value="male" checked/>
     <br>
-    <label> female </label>
+    <label> femme </label>
     <input type="radio" id="female" name="stagiaire.gender" value="female" />
     <br>
     <s:submit value="envoyer"/>

@@ -43,8 +43,8 @@
 
     <div class="finp" num="0" rep="2">
     <span class="fhead"><input class="header-form" type="text" name="questions[0].intitule" num="0" value="intitule de la question 1"/></span>
-    <button onclick="return addReponses(event, this.parentNode)">Ajout Reponse</button>
-    <button onclick="return delReponses(event, this.parentNode)">Enlever Reponse</button> <br>
+    <button onclick="return addReponses(event, this.parentNode)">Ajout réponse</button>
+    <button onclick="return delReponses(event, this.parentNode)">Enlever réponse</button> <br>
     <input type="text" name="questions[0].reponses[0].intitule" value="reponse1"/>
     <input type="text" name="questions[0].reponses[1].intitule" value="reponse2"/>
     </div>
@@ -54,8 +54,8 @@
 
     <div class="finp" num="1" rep="2">
     <span class="fhead"><input class="header-form" type="text" name="questions[1].intitule" num="1" value="intitule de la question 2"/></span>
-    <button onclick="return addReponses(event, this.parentNode)">Ajout Reponse</button>
-    <button onclick="return delReponses(event, this.parentNode)">Enlever Reponse</button> <br>
+    <button onclick="return addReponses(event, this.parentNode)">Ajout réponse</button>
+    <button onclick="return delReponses(event, this.parentNode)">Enlever réponse</button> <br>
     <input type="text" name="questions[1].reponses[0].intitule" value="reponse1"/>
     <input type="text" name="questions[1].reponses[1].intitule" value="reponse2"/>
     </div>
@@ -63,8 +63,8 @@
 
     <div class="finp" num="2" rep="2" style="display: none;">
         <span class="fhead"><input class="header-form" type="text" name="questions[2].intitule" num="2" value="nom Question"/></span>
-        <button onclick="return addReponses(event, this.parentNode)">Ajout Reponse</button>
-        <button onclick="return delReponses(event, this.parentNode)">Enlever Reponse</button> <br>
+        <button onclick="return addReponses(event, this.parentNode)">Ajout réponse</button>
+        <button onclick="return delReponses(event, this.parentNode)">Enlever réponse</button> <br>
         <input type="text" name="questions[2].reponses[0].intitule" value="reponse1"/>
         <input type="text" name="questions[2].reponses[1].intitule" value="reponse2"/>
     </div>
@@ -72,8 +72,8 @@
 
     <div class="finp" num="3" rep="2" style="display: none;">
         <span class="fhead"><input class="header-form" type="text" name="questions[3].intitule" num="3" value="nom Question"/></span>
-        <button onclick="return addReponses(event, this.parentNode)">Ajout Reponse</button>
-        <button onclick="return delReponses(event, this.parentNode)">Enlever Reponse</button> <br>
+        <button onclick="return addReponses(event, this.parentNode)">Ajout réponse</button>
+        <button onclick="return delReponses(event, this.parentNode)">Enlever réponse</button> <br>
         <input type="text" name="questions[3].reponses[0].intitule" value="reponse1"/>
         <input type="text" name="questions[3].reponses[1].intitule" value="reponse2"/>
     </div>
@@ -81,8 +81,8 @@
 
     <div class="finp" num="4" rep="2" style="display: none;">
         <span class="fhead"><input class="header-form" type="text" name="questions[4].intitule" num="4" value="nom Question"/></span>
-        <button onclick="return addReponses(event, this.parentNode)">Ajout Reponse</button>
-        <button onclick="return delReponses(event, this.parentNode)">Enlever Reponse</button> <br>
+        <button onclick="return addReponses(event, this.parentNode)">Ajout réponse</button>
+        <button onclick="return delReponses(event, this.parentNode)">Enlever réponse</button> <br>
         <input type="text" name="questions[4].reponses[0].intitule" value="reponse1"/>
         <input type="text" name="questions[4].reponses[1].intitule" value="reponse2"/>
     </div>
@@ -90,8 +90,8 @@
 
     <div class="finp" num="5" rep="2" style="display: none;">
         <span class="fhead"><input class="header-form" type="text" name="questions[5].intitule" num="5" value="nom Question"/></span>
-        <button onclick="return addReponses(event, this.parentNode)">Ajout Reponse</button>
-        <button onclick="return delReponses(event, this.parentNode)">Enlever Reponse</button> <br>
+        <button onclick="return addReponses(event, this.parentNode)">Ajout réponse</button>
+        <button onclick="return delReponses(event, this.parentNode)">Enlever réponse</button> <br>
         <input type="text" name="questions[5].reponses[0].intitule" value="reponse1"/>
         <input type="text" name="questions[5].reponses[1].intitule" value="reponse2"/>
     </div>
@@ -99,8 +99,8 @@
 
     <br>
     <input type="submit" value="Submit"> </form>
-    <button onclick="addQuestions(event)">Ajout Question</button>
-    <button onclick="delQuestion(event)">Delete Question</button>
+    <button onclick="addQuestions(event)">Ajout question</button>
+    <button onclick="delQuestion(event)">Supprimer question</button>
     <script>
 
         var nbQuestion = 2;
