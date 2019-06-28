@@ -27,21 +27,19 @@
         societe: <s:property value="societe"/><br/>
         gender: <s:property value="gender"/><br/>
         actif: <s:property value="actif"/><br/>
-        <button onclick="modifier(event)">Modifier utilisateur</button>
+        <button onclick="post('modifierStagiaire',this,'post')">Modifier utilisateur</button>
     </fieldset>
 </s:iterator>
 <script>
     function post(path, params, method='post') {
 
-        // The rest of this code assumes you are not using a library.
-        // It can be made less wordy if you use one.
-        const form = document.createElement('form');
+        var form = document.createElement('form');
         form.method = method;
         form.action = path;
 
-        for (const key in params) {
+        for (var key in params) {
             if (params.hasOwnProperty(key)) {
-                const hiddenField = document.createElement('input');
+                var hiddenField = document.createElement('input');
                 hiddenField.type = 'hidden';
                 hiddenField.name = key;
                 hiddenField.value = params[key];
@@ -53,7 +51,7 @@
         document.body.appendChild(form);
         form.submit();
     }
-    //post('/contact/', {name: 'Johnny Bravo'});
+
 </script>
 </body>
 </html>

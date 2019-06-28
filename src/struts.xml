@@ -31,7 +31,17 @@
         <result name="failure">fail.jsp</result>
     </action>
     <action name="listQuestionnairesStagiaire" class="action.listAllQuestionnaire">
-        <result name="success">lister-qstnr-s.jsp</result>
+        <result name="success">lister-qstnr-stagiaire.jsp</result>
+        <result name="failure">fail.jsp</result>
+    </action>
+
+    <action name="modifierStagiaire" class="action.modifierAction">
+        <result name="success">formulaire-user.jsp</result>
+        <result name="failure">fail.jsp</result>
+    </action>
+
+    <action name="modifierQuest" class="action.modifierAction">
+        <result name="success">formulaire-questionaire.jsp</result>
         <result name="failure">fail.jsp</result>
     </action>
 </package>
