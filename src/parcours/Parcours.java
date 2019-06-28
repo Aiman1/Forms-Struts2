@@ -6,7 +6,7 @@ import utilisateurs.Utilisateur;
 
 import java.util.List;
 
-public class Parcours {
+public class    Parcours {
     private int id;
     private double duree;
     private int score;

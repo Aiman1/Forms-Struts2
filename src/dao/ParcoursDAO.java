@@ -1,7 +1,9 @@
 package dao;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,14 +25,14 @@ public class ParcoursDAO implements DAO<Parcours>{
 			String sqlText = "SELECT * FROM Parcours WHERE id = " + id;
 			ResultSet res = sql.executeQuery(sqlText);
 			if(res.next()) {
-				questionnaire = new Parcours((int)id, res.getDouble("duree"), res.getInt("score"), res.getInt("idUtilisateur"), res.getInt("idQuestionnaire"));
+				parcours = new Parcours((int)id, res.getDouble("duree"), res.getInt("score"), res.getInt("idUtilisateur"), res.getInt("idQuestionnaire"));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
-		return Optional.ofNullable(questionnaire);
+		return Optional.ofNullable(parcours);
 	}
 
 	@Override
