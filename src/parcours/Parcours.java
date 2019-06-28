@@ -7,7 +7,7 @@ import utilisateurs.Utilisateur;
 import java.util.List;
 import java.util.Optional;
 
-public class Parcours {
+public class    Parcours {
     private int id;
     private double duree;
     private int score;
