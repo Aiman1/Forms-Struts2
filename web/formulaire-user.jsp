@@ -41,6 +41,7 @@
     <label> femme </label>
     <input type="radio" id="female" name="stagiaire.gender" value="female" />
     <br>
+    <input type="hidden" name="admin" value="false">
     <s:submit value="envoyer"/>
 </s:form>
 </body>

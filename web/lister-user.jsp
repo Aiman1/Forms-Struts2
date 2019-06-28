@@ -21,7 +21,6 @@
 <s:iterator  value="list">
     <fieldset>
         id: <s:property value="id"/><br/>
-        isAdmin(): <s:property value="isAdmin()"/><br/>
         family_name: <s:property value="family_name"/><br/>
         first_name: <s:property value="first_name"/><br/>
         tel: <s:property value="tel"/><br/>

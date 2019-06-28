@@ -1,12 +1,13 @@
 package dao;
 
-import java.sql.Connection;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import db.Database;
 import parcours.Parcours;
+import questionnaire.Questionnaire;
 
 public class ParcoursDAO implements DAO<Parcours>{
 	private static Connection db;
@@ -20,17 +21,27 @@ public class ParcoursDAO implements DAO<Parcours>{
 		Parcours parcours = new Parcours();
 		try {
 			Statement sql = db.createStatement();
-			String sqlText = "SELECT * FROM Parcours WHERE id = " + id;
+			String sqlText = "SELECT * FROM parcours WHERE id = " + id;
 			ResultSet res = sql.executeQuery(sqlText);
-			if(res.next()) {
-				questionnaire = new Parcours((int)id, res.getDouble("duree"), res.getInt("score"), res.getInt("idUtilisateur"), res.getInt("idQuestionnaire"));
+			if(!res.next()) {
+				return null;
+			}
+			parcours = new Parcours((int)id, res.getDouble("duree"), res.getInt("score"), res.getInt("idUtilisateur"), res.getInt("idQuestionnaire"));
+			//create new statement
+			sqlText = "SELECT * FROM questionnaire WHERE cleParcours= " + id;
+			sql = db.createStatement();
+			res = sql.executeQuery(sqlText);
+
+			if (res.next()) {
+				int lid = res.getInt("id");
+				parcours.setQ(lid);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
-		return Optional.ofNullable(questionnaire);
+		return Optional.ofNullable(parcours);
 	}
 
 	@Override
@@ -41,7 +52,7 @@ public class ParcoursDAO implements DAO<Parcours>{
 			ResultSet res = st.executeQuery("select * from Parcours" );
 
 			while(res.next()){
-				l.add(new Parcours((int)id, res.getDouble("duree"), res.getInt("score"), res.getInt("idUtilisateur"), res.getInt("idQuestionnaire")););
+				l.add(new Parcours((int) res.getInt("id"), res.getDouble("duree"), res.getInt("score"), res.getInt("idUtilisateur"), res.getInt("idQuestionnaire")));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -90,7 +101,6 @@ public class ParcoursDAO implements DAO<Parcours>{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return 0;
 		return 0;
 	}
 

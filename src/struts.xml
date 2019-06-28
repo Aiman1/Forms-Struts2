@@ -12,7 +12,7 @@
     </action>
 
     <action name="createUserAction" class="action.createUserAction">
-        <result name="succes">createdUser.jsp</result>
+        <result name="success">createdUser.jsp</result>
         <result name="failure">fail.jsp</result>
     </action>
 
@@ -28,6 +28,10 @@
 
     <action name="listQuestionnaires" class="action.listAllQuestionnaire">
         <result name="success">lister-qstnr.jsp</result>
+        <result name="failure">fail.jsp</result>
+    </action>
+    <action name="listQuestionnairesStagiaire" class="action.listAllQuestionnaire">
+        <result name="success">lister-qstnr-s.jsp</result>
         <result name="failure">fail.jsp</result>
     </action>
 </package>

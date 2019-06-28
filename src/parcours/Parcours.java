@@ -5,6 +5,7 @@ import questionnaire.Reponse;
 import utilisateurs.Utilisateur;
 
 import java.util.List;
+import java.util.Optional;
 
 public class Parcours {
     private int id;
@@ -12,10 +13,19 @@ public class Parcours {
     private int score;
     private int idUtilisateur;
     private int idQuestionnaire;
+    private String intitule;
     private List<Reponse> reponses;
 
     public Parcours(){
 
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Parcours(int id, double duree, int score, int idUtilisateur, int idQuestionnaire) {
@@ -26,20 +36,20 @@ public class Parcours {
         this.score = score;
     }
 
-    public Utilisateur getU() {
-        return u;
+    public int getIdUtilisateur() {
+        return idUtilisateur;
     }
 
-    public void setU(Utilisateur u) {
-        this.u = u;
+    public void setU(int u) {
+        this.idUtilisateur = u;
     }
 
-    public Questionnaire getQ() {
-        return q;
+    public int getIdQuestionnaire() {
+        return idQuestionnaire;
     }
 
-    public void setQ(Questionnaire q) {
-        this.q = q;
+    public void setQ(int id) {
+        this.idQuestionnaire =  id;
     }
 
     public double getDuree() {
@@ -56,5 +66,15 @@ public class Parcours {
 
     public void setScore(int score) {
         this.score = score;
+    }
+
+
+    public String getIntitule() {
+        return intitule;
+    }
+
+
+    public boolean getStatut() {
+        return true;
     }
 }

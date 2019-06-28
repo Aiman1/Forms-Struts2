@@ -20,11 +20,14 @@
 <h1>Bonjour ${user}</h1>
 
 
-<button><a href="formulaire-user.jsp">Créer un stagiaire</a></button>
-<button><a href="formulaire-admin.jsp">Créer un administrateur</a></button>
-<button><a href="listAllUsers">Lister utilisateurs</a></button>
-<button><a href="listQuestionnaires">Lister questionnaires</a></button>
-<button><a href="formulaire-questionaire.jsp">Créer un questionnaire</button>
+<a href="formulaire-user.jsp"><button>Créer un stagiaire</button></a>
+<a href="formulaire-admin.jsp"><button>Créer un administrateur</button></a>
+<a href="listAllUsers"><button>Lister utilisateurs</button></a>
+<a href="listQuestionnaires"><button>Lister questionnaires</button></a>
+<a href="formulaire-questionaire.jsp"><button>Créer un questionnaire</button></a>
+<br>
+<br>
+<a href="index.jsp"><button>Logout</button></a>
 
 
 </body>
